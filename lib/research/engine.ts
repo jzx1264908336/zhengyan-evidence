@@ -72,23 +72,30 @@ export const metrics=buildMetrics();
 export const metric=(id:string)=>metrics.find(m=>m.id===id);
 
 export function routeQuestion(question:string):ResearchTask {
+ const unsupported=/工商银行|建设银行|农业银行|中国银行|中国平安|宁德时代|比亚迪|腾讯控股|阿里巴巴|美的|格力|伊利|中国石油/.test(question)||[...question.matchAll(/\b(\d{6})(?:\.(?:SH|SZ))?\b/gi)].some(m=>m[1]!=='600519');
+ if(unsupported)return {intent:'scope',dimensions:[],explanation:'本产品仅支持贵州茅台深度诊断；其他公司只可作为已列明的同行证据，不能替代独立诊断。',restricted:true};
+ if(/202[0-4]\s*年|202[0-4]年的|202[0-4]年度/.test(question))return {intent:'period',dimensions:[],explanation:'当前问题解读以 2026 前三季度及 2025 年对照为主，暂不生成指定早期年份的专项诊断。可在财务趋势中查看已收录历史数值。',restricted:true};
+ const window=question.match(/(?:最近|近)\s*(\d+)\s*(?:个)?(?:共同)?(?:交易)?[日天]/);
+ if(window&&![20,60,244].includes(Number(window[1])))return {intent:'period',dimensions:[],explanation:'行情支持最近 20、60、244 个共同交易日窗口；暂不支持其他长度或自然日窗口。',restricted:true};
+ if(window&&/天|自然日/.test(window[0]))return {intent:'period',dimensions:[],explanation:'行情使用共同交易日窗口，不将自然日请求自动替换为交易日。请指定 20、60 或 244 个交易日。',restricted:true};
+ const marketCount=window?Number(window[1]):20;
  if(/(?:分析|诊断|研究)(?:一下)?(?:银行|保险公司|券商|宁德|比亚迪|腾讯控股)|招商银行|平安银行|茅台以外|五粮液.*诊断/.test(question))return {intent:'scope',dimensions:[],explanation:'首版仅支持贵州茅台深度诊断。同行用于比较，不支持独立诊断；金融公司需要专门指标体系。',restricted:true};
  if(/买入|卖出|满仓|涨停|明天.*涨|目标价|收益保证/.test(question))return {intent:'boundary',dimensions:['风险'],explanation:'产品提供证据研究，不生成直接交易指令、确定性涨跌预测或收益承诺。可继续核验经营与估值证据。',restricted:true};
  const cash=/现金|回款|利润|经营|收入|银行存款/.test(question);
- const valuation=/估值|便宜|昂贵|贵不贵|贵吗|同行|行业|市盈率|\bPE\b/i.test(question);
- const event=/事件|公告|行情|股价|走势|市场|更正|修订|更新/.test(question);
+ const valuation=/估值|便宜|昂贵|贵不贵|贵吗|同行|行业|市盈率|市净率|市值|\bPB\b|\bPE\b|TTM/i.test(question);
+ const event=/事件|公告|行情|股价|走势|市场|更正|修订|更新|回撤|基准/.test(question);
  const selected=[cash,valuation,event].filter(Boolean).length;
  const ds=[...(cash?['经营质量','财务趋势']:[]),...(valuation?['估值','行业位置','财务趋势']:[]),...(event?['重要事件','行情特征']:[]),'风险'];
- if(selected>1)return {intent:'overview',dimensions:[...new Set(ds)],explanation:'问题涉及多个方面，合并对应研究维度。市场数据为同日公开快照，财务使用已披露期次；不把相关关系认定为因果。',restricted:false};
+ if(selected>1)return {intent:'overview',dimensions:[...new Set(ds)],explanation:'问题涉及多个方面，合并对应研究维度。市场数据为同日公开快照，财务使用已披露期次；不把相关关系认定为因果。',restricted:false,marketCount};
  if(cash)return {intent:'cash',dimensions:['经营质量','财务趋势','风险'],explanation:'检查利润与现金流一致性，并核验财务公司对合并口径的影响。当前主要对比 2026 前三季度和上年同期。',restricted:false};
  if(valuation)return {intent:'peers',dimensions:['估值','行业位置','财务趋势','风险'],explanation:'分别计算 TTM 与同年度静态市盈率，检查业务、收入确认与样本代表性；倍数不能单独证明低估。',restricted:false};
- if(event)return {intent:'event',dimensions:['重要事件','行情特征','风险'],explanation:'先核验披露与数据版本，再看共同交易日的价格表现；日期对齐与相关性均不能证明事件因果。',restricted:false};
+ if(event)return {intent:'event',dimensions:['重要事件','行情特征','风险'],explanation:`先核验披露与数据版本，再看最近 ${marketCount} 个共同交易日的价格表现；日期对齐与相关性均不能证明事件因果。`,restricted:false,marketCount};
  return {intent:'overview',dimensions:['经营质量','财务趋势','行业位置','风险'],explanation:'按综合研究处理，优先检查经营、趋势、同行和风险。可限定现金流、估值或事件问题。',restricted:false};
 }
 
 export function buildClaims():Claim[] {
  const p=(id:string)=>format(metric(id)?.value??null);
- return [
+ const result:Claim[] = [
  {id:'C-risk',title:'关键风险在于判断所依赖的证据边界',body:'季度财务信息未经审计，合并财务公司影响尚未完整拆分，渠道收入也不能替代终端动销。当前研究需要保留这些限制。',stance:'unknown',kind:'分析推断',dimension:'风险',metrics:[],notes:['N-audit','N-channel','N-cash'],limitation:'这里描述研究结论的脆弱性，不将信息不足认定为公司已经发生财务或经营问题。',next:'核验后续审计结果、业务现金流拆分及同口径渠道资料，检查结论是否需要调整。'},
  {id:'C-cash',title:'现金流显著增长，但不等于主业回款同比翻倍',body:`2026 前三季度经营现金流同比 ${p('9M-ocf-yoy')}，销售商品、提供劳务收到的现金同比 ${p('9M-salesCash-yoy')}。两者增幅差异明显，公司披露的现金流变动解释涉及财务公司业务。`,stance:'conflict',kind:'分析推断',dimension:'经营质量',metrics:['9M-ocf-yoy','9M-salesCash-yoy','bank-delta'],notes:['N-cash'],limitation:'合并现金流包含财务公司。不能用这两项增幅差直接计算“剔除财务公司后的酒类现金流”，销售回款也并非终端实际动销。',next:'核验财务公司现金流与酒类经营现金流的分部拆分，检查同业存款和成员存款变化。'},
  {id:'C-revenue',title:'前三季度收入增长，归母利润尚未同步增长',body:`同口径累计期营业收入同比 ${p('9M-revenue-yoy')}，归母净利润同比 ${p('9M-parentProfit-yoy')}。收入增长与利润变化的方向不同。`,stance:'negative',kind:'事实',dimension:'财务趋势',metrics:['9M-revenue-yoy','9M-parentProfit-yoy','20269M-margin'],notes:['N-audit'],limitation:'这里比较的是 1—9 月累计期，不是第三季度单季；原因需要结合成本、费用和产品结构进一步核验。',next:'查看产品结构与成本费用明细，核验哪些因素使收入与利润变化不同步。'},
@@ -99,12 +106,19 @@ export function buildClaims():Claim[] {
  {id:'C-peer',title:'同行样本存在收入确认差异，不能机械排名',body:'已核验三家白酒同行的年度数据。五粮液披露收入确认核算调整，默认从同比中位数中排除；其余样本不足三家，不生成同行分位。',stance:'conflict',kind:'分析推断',dimension:'行业位置',metrics:['000858.SZ-revenue-yoy'],notes:['N-wly'],limitation:'香型、价格带和财务公司业务不同，小样本不能代表全行业；仅比较 2025 年年度数据。',next:'扩充口径一致的同行，并检查收入确认变化对跨期比较的影响。'},
  {id:'C-price',title:'区间表现可复核，事件因果关系仍未证实',body:`最近 20 个共同交易日，个股前复权价格表现为 ${p('sh600519-return-20')}，沪深300 点位变化为 ${p('sh000300-return-20')}。使用对齐日期，避免错配区间。`,stance:'unknown',kind:'分析推断',dimension:'行情特征',metrics:['sh600519-return-20','sh000300-return-20','sh600519-drawdown-20'],notes:[],limitation:'公开供应商前复权价格的收益口径不等于分红再投资总回报；没有因果识别，不能说公告造成上涨或下跌。',next:'查看公告前后的明确交易区间，核验其他同期信息和基准变化，保留因果不确定性。'},
  ];
+ return result.map(c=>c.metrics.some(id=>{const v=metric(id)?.value;return v===null||v===undefined||!Number.isFinite(v)})?{...c,title:'所需指标缺失，暂不形成判断',body:'该结论依赖的指标缺失或不可计算，暂停原有方向性判断。请沿证据核验输入与口径。',stance:'unknown',kind:'未验证'}:c);
 }
 export const claims=buildClaims();
-export function selectClaims(task:ResearchTask,challenge=false):Claim[]{if(task.restricted)return [];const selected=claims.filter(c=>task.dimensions.includes(c.dimension)||c.dimension==='风险');return challenge?selected.filter(c=>c.stance!=='positive'):selected;}
+export function claimForTask(claim:Claim,task:ResearchTask):Claim {
+ const count=task.marketCount??20;
+ if(claim.id!=='C-price'||count===20)return claim;
+ const ids=['sh600519-return-','sh000300-return-','sh600519-drawdown-'].map(id=>id+count);
+ return {...claim,metrics:ids,body:`最近 ${count} 个共同交易日，个股前复权价格表现为 ${format(metric(ids[0])?.value??null)}，沪深300 点位变化为 ${format(metric(ids[1])?.value??null)}。使用对齐日期，避免错配区间。`};
+}
+export function selectClaims(task:ResearchTask,challenge=false):Claim[]{if(task.restricted)return [];const selected=buildClaims().filter(c=>task.dimensions.includes(c.dimension)||c.dimension==='风险').map(c=>claimForTask(c,task));return challenge?selected.filter(c=>c.stance!=='positive'):selected;}
 export function peers(exclude:string[]=['000858.SZ']) {return [{code:'600519.SH',name:'贵州茅台',prefix:'',note:'酱香；合并财务公司'},{code:'000568.SZ',name:'泸州老窖',prefix:'000568.SZ-',note:'浓香；价格带与结构不同'},{code:'600809.SH',name:'山西汾酒',prefix:'600809.SH-',note:'清香；地域与渠道结构不同'},{code:'000858.SZ',name:'五粮液',prefix:'000858.SZ-',note:'收入确认核算调整，默认排除'}].map(p=>({...p,revenue:value(p.prefix+'2025-revenue'),profit:value(p.prefix+'2025-parentProfit'),roe:value(p.prefix+'2025-roe'),growth:metric(p.prefix?p.code+'-revenue-yoy':'2025-revenue-yoy')?.value??null,excluded:exclude.includes(p.code)}));}
 export function validateClaimsEvidence(output:{text:string;evidenceIds:string[]}[]):string[] {
  const valid=new Set([...metrics.map(m=>m.id),...notes.map(n=>n.id)]);const errors:string[]=[];
- for(const c of output){if(!c.evidenceIds.length)errors.push('结论缺少证据');for(const id of c.evidenceIds)if(!valid.has(id))errors.push('无效证据引用');if(/买入|卖出|满仓|必涨|保证收益|行业第一/.test(c.text))errors.push('超出允许的结论范围');}
+ for(const c of output){if(!c.evidenceIds.length)errors.push('结论缺少证据');for(const id of c.evidenceIds)if(!valid.has(id))errors.push('无效证据引用');if(/买入|卖出|满仓|必涨|保证收益|行业第一|加仓|减仓|建仓|清仓|抄底|追涨|建议持有|建议.{0,6}持有|一定.{0,4}(?:上涨|下跌)|等待反弹/.test(c.text))errors.push('超出允许的结论范围');}
  return errors;
 }

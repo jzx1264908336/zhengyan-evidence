@@ -4,5 +4,5 @@ export type Observation = {id:string; label:string; raw:string; unit:'CNY'|'perc
 export type FilingNote = {id:string; title:string; text:string; sourceId:string; page:number; kind:'disclosure'|'limitation'};
 export type Metric = {id:string; label:string; value:number|null; unit:string; formula:string; inputs:string[]; reason?:string};
 export type Claim = {id:string; title:string; body:string; stance:Stance; kind:'事实'|'分析推断'|'未验证'; dimension:string; metrics:string[]; notes:string[]; limitation:string; next:string};
-export type ResearchTask = {intent:string; dimensions:string[]; explanation:string; restricted:boolean};
+export type ResearchTask = {intent:string; dimensions:string[]; explanation:string; restricted:boolean; marketCount?:number};
 export type AIResult = {status:'unconfigured'|'verified'|'failed'; summary:string; claims:{text:string;evidenceIds:string[]}[]; message:string};

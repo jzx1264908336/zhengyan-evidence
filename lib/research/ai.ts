@@ -1,7 +1,7 @@
 import { metrics, notes, format, routeQuestion, selectClaims, snapshot, validateClaimsEvidence } from './engine.ts';
 import type { AIResult } from './types.ts';
 import {localAnswerPlan,localSectionSchema,localSectionPacket,validateLocalSections} from './local-quality.ts';
-export const PROMPT_VERSION='evidence-sections-v4';
+export const PROMPT_VERSION='evidence-sections-v5';
 export const DEFAULT_MODEL_ENDPOINT='https://api.openai.com/v1/responses';
 export const DEFAULT_MODEL_NAME='gpt-5.4-mini';
 export const LOCAL_MODEL_ENDPOINT='http://127.0.0.1:11434/api/chat';
@@ -33,7 +33,7 @@ export function validateModelResult(input:unknown,allowedIds?:Set<string>): {tex
   if(!c||typeof c!=='object'||!('text'in c)||typeof c.text!=='string'||c.text.length>700||!('evidenceIds'in c)||!Array.isArray(c.evidenceIds)||c.evidenceIds.some(id=>typeof id!=='string'))throw new Error('结论字段无效');
   const evidenceIds=c.evidenceIds as string[];
   const text=c.text.replace(/\{\{([^}]+)\}\}/g,(_,id:string)=>{const m=metrics.find(m=>m.id===id);if(!m||m.value===null||!evidenceIds.includes(id))throw new Error('数字占位符没有对应证据');return "";});
-  if(/[0-9０-９%％]/.test(text))throw new Error('模型自由生成了数字');
+  if(/[0-9０-９%％]|[零〇一二两三四五六七八九十百千万亿]+(?:点[零〇一二两三四五六七八九]+)?\s*倍|百分之[零〇一二两三四五六七八九十百千万亿]+/.test(text))throw new Error('模型自由生成了数字');
   if(allowedIds&&evidenceIds.some(id=>!allowedIds.has(id)))throw new Error('证据不属于当前任务证据包');
   return {text:c.text,evidenceIds};
  });
@@ -46,6 +46,7 @@ export async function interpret(question:string,challenge:boolean,config:ModelCo
  const task=routeQuestion(question);if(task.restricted)return {status:'verified',summary:'',claims:[],message:task.explanation};
  try{
   const available=selectClaims(task,challenge);
+  if(available.some(c=>c.kind==='未验证'&&c.metrics.length>0))return {status:'failed',summary:'',claims:[],message:'研究所需指标缺失或不可计算，暂停 AI 解读。请先核验数据，未生成方向性结论。'};
   const relevant=available;
   const plan=local?localAnswerPlan(question,challenge):[];
   const ids=new Set(local?plan.flatMap(s=>s.evidenceIds):relevant.flatMap(c=>[...c.metrics,...c.notes]));

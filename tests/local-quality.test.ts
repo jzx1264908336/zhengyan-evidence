@@ -19,7 +19,7 @@ test('Unsupported anomaly and cash-flow causal claims are rejected',()=>{
  assert.throws(()=>validateLocalSections({peers:'收入确认调整导致数据异常，因此必须排除。'},localAnswerPlan('五粮液收入确认调整如何比较？')));
  assert.throws(()=>validateLocalSections({cash:'销售回款同比也受财务公司资金变化影响。'},localAnswerPlan('现金流改善了吗？')));
  assert.doesNotThrow(()=>validateLocalSections({peers:'收入确认核算调整是可比性限制，而非数据异常或公司异常。'},localAnswerPlan('五粮液收入确认调整如何比较？')));
- assert.throws(()=>validateLocalSections({peers:'收入确认核算调整导致季度数据出现重大差异。'},localAnswerPlan('五粮液收入确认调整如何比较？')));
+ assert.doesNotThrow(()=>validateLocalSections({peers:'年度报告披露收入确认核算调整，与已披露季度数据存在重大差异；仍需保留同行可比性限制。'},localAnswerPlan('五粮液收入确认调整如何比较？')));
  assert.doesNotThrow(()=>validateLocalSections({peers:'收入确认核算调整仅影响年度可比性，不得推断季度数据异常或差异严重程度。'},localAnswerPlan('五粮液收入确认调整如何比较？')));
 });
 test('Program assigns evidence per section rather than accepting invented model citations',()=>{

@@ -62,7 +62,7 @@ export default defineConfig(async ({ command }) => {
         config: {
           ...localBindingConfig,
           ...(command==='serve'&&process.env.MODEL_PROVIDER==='ollama'?{
-            vars:{MODEL_PROVIDER:'ollama',MODEL_ENDPOINT:'http://127.0.0.1:11434/api/chat',MODEL_NAME:'qwen3.5:9b',...(process.env.HITHINK_FINANCE_API_KEY?{HITHINK_FINANCE_API_KEY:process.env.HITHINK_FINANCE_API_KEY}:{})},
+            vars:{MODEL_PROVIDER:'ollama',MODEL_ENDPOINT:'http://127.0.0.1:11434/api/chat',MODEL_NAME:'qwen3.5:9b',...(process.env.HITHINK_FINANCE_API_KEY?{HITHINK_FINANCE_API_KEY:process.env.HITHINK_FINANCE_API_KEY}:{}),...(process.env.IFIND_MCP_TOKEN?{IFIND_MCP_TOKEN:process.env.IFIND_MCP_TOKEN}:{})},
           }:{}),
           ...(command === "serve"
             ? {

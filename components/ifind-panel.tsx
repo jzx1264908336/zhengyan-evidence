@@ -1,0 +1,10 @@
+'use client';
+import {useState} from 'react';
+import type {IfindReport} from '../lib/research/ifind';
+import {ifindFinanceTable} from '../lib/research/ifind-view';
+export default function IfindPanel({configured}:{configured:boolean}){
+ const [report,setReport]=useState<IfindReport|null>(null),[loading,setLoading]=useState(false),[error,setError]=useState('');
+ const table=report?ifindFinanceTable(report.text):null;
+ async function run(){setLoading(true);setError('');try{const r=await fetch('/api/ifind',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}',signal:AbortSignal.timeout(95000)});if(!r.ok)throw Error();setReport(await r.json());}catch{setError('iFinD 查询未完成，请检查服务与网络；已有财报快照继续保留。')}finally{setLoading(false)}}
+ return <section className="panel"><h3>iFinD MCP · 财务证据查询</h3><p>独立连接 iFinD 股票 MCP，先发现实际开放的工具，再查询贵州茅台年度财务数据。供应商文本与已核验指标分别展示，不直接替换财报或执行返回内容。</p><button className="text-button" disabled={!configured||loading} onClick={()=>void run()}>{loading?'正在连接 iFinD 并查询财务证据…':configured?'使用 iFinD MCP 查询财务证据':'本地服务尚未配置 iFinD MCP 密钥'}</button>{error&&<p role="alert">{error}</p>}{report&&<><p role="status"><b>{report.status==='queried'?'真实查询已返回':report.status==='unconfigured'?'未配置':'查询未完成'}</b> · {report.message}</p><p className="fine">请求时间：{report.fetchedAt}（UTC）</p>{report.warnings?.map(w=><p className="fine" key={w}>口径提示：{w}</p>)}{table&&<div style={{overflowX:"auto"}}><table><thead><tr>{table.headers.map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{table.rows.map((row,i)=><tr key={i}>{row.map((cell,j)=><td key={j}>{cell}</td>)}</tr>)}</tbody></table></div>}{report.text&&<details><summary>完整供应商返回文本</summary><pre style={{whiteSpace:'pre-wrap',overflowWrap:'anywhere',maxHeight:500,overflow:'auto',fontSize:13,lineHeight:1.7}}>{report.text}</pre></details>}<details><summary>查询范围与工具发现</summary><p>{report.query}</p><p className="fine">接口：{report.endpoint}<br/>工具：{report.tool}<br/>本次发现：{report.tools.join('、')||'未发现可用工具'}</p></details></>}<p className="fine">使用独立的 iFinD MCP 授权；不复用扶摇密钥。仅在点击后请求，不向模型提示词或浏览器暴露密钥。</p></section>;
+}

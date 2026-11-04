@@ -4,7 +4,7 @@ import {parseEnv} from 'node:util';
 import {join} from 'node:path';
 import {spawn} from 'node:child_process';
 // Import only the separately authorized finance key; cloud model credentials stay unused.
-if(existsSync('.env')){const finance=parseEnv(readFileSync('.env','utf8')).HITHINK_FINANCE_API_KEY;if(finance&&!process.env.HITHINK_FINANCE_API_KEY)process.env.HITHINK_FINANCE_API_KEY=finance;}
+if(existsSync('.env')){const privateEnv=parseEnv(readFileSync('.env','utf8'));for(const name of ['HITHINK_FINANCE_API_KEY','IFIND_MCP_TOKEN'])if(privateEnv[name]&&!process.env[name])process.env[name]=privateEnv[name];}
 async function models(){try{const r=await fetch('http://127.0.0.1:11434/api/tags',{signal:AbortSignal.timeout(1500)});return r.ok?(await r.json()).models:null}catch{return null}}
 let installed=await models();
 if(!installed&&process.platform==='win32'){

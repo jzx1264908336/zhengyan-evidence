@@ -1,6 +1,7 @@
+import {validateIfindContent,type IfindValidation} from './ifind-validation.ts';
 export const IFIND_ENDPOINT='https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-stock-mcp';
 export const IFIND_QUERY='查询贵州茅台（600519.SH）2025年年度营业收入、归属于母公司股东的净利润、经营活动产生的现金流量净额。请返回公司代码、报告期、币种、单位和原始数值，不做买卖建议。';
-export type IfindReport={status:'unconfigured'|'queried'|'failed';fetchedAt:string;endpoint:string;tool:string;query:string;tools:string[];text:string;rawText?:string;warnings?:string[];message:string};
+export type IfindReport={status:'unconfigured'|'queried'|'failed';fetchedAt:string;endpoint:string;tool:string;query:string;tools:string[];text:string;rawText?:string;warnings?:string[];validation?:IfindValidation;message:string};
 export function viewIfindText(text:string):{text:string;warnings:string[]}{
  let parsed:any;try{parsed=JSON.parse(text)}catch{return {text,warnings:['返回内容未经结构化语义核验，请核对报告期和单位。']}}
  if(parsed&&typeof parsed==='object'&&'code'in parsed&&parsed.msg!=='success')throw Error('iFinD 财务工具业务返回未成功');
@@ -53,6 +54,6 @@ export async function queryIfind(token:string|undefined,fetcher:typeof fetch=fet
   // Keep provider content as untrusted plain text, separate from verified metrics and AI prompts.
   const safe=text.split(token.trim()).join('[密钥已隐藏]').split(session).join('[会话已隐藏]');
   const view=viewIfindText(safe);
-  return {...base,status:'queried',tools:names,text:view.text.slice(0,24000),rawText:safe.slice(0,24000),warnings:view.warnings,message:'已完成 MCP 握手、工具发现与真实财务查询。下方是供应商返回文本，尚未自动映射为已核验指标；需核对公司、期次、单位及原始财报。'+(safe.length>24000?'响应过长，已截取前段。':'')};
+  return {...base,status:'queried',tools:names,text:view.text.slice(0,24000),rawText:safe.slice(0,24000),warnings:view.warnings,validation:validateIfindContent(safe),message:'已完成 MCP 握手、工具发现与真实财务查询。下方是供应商返回文本，尚未自动映射为已核验指标；需核对公司、期次、单位及原始财报。'+(safe.length>24000?'响应过长，已截取前段。':'')};
  }catch(error){const known=['iFinD 财务工具业务返回未成功','MCP 响应为空','MCP 响应超出大小限制','MCP 流未返回对应请求','MCP 响应请求编号不匹配','iFinD 密钥无效或失效','iFinD 权限不足','iFinD 限流，请稍后重试','iFinD HTTP 请求失败','MCP 返回错误或无效结果','MCP 未返回会话编号','MCP 协议版本不兼容','MCP 工具目录格式错误','MCP 工具分页无效','当前 iFinD 工具目录未开放财务查询','iFinD 财务工具调用失败','iFinD 财务工具未返回文本结果'];return {...base,status:'failed',tools:names,text:'',message:error instanceof Error&&known.includes(error.message)?error.message:'iFinD 网络超时或响应解析失败；未替换已有研究数据。'};}
 }

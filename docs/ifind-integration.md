@@ -1,5 +1,7 @@
 # iFinD MCP 接入说明
 
+当前 V8 已实现单位、舍入区间、期次与报表范围自动核验，详见 [自动核验规则与真实结果](ifind-validation.md)。实际样本金额相容，但 MRQ 参数仍使期次未决；CLI 退出码 0 表示调用且规则一致，1 表示调用失败，2 表示已调用但数据仍有待核验或冲突。以下 V7 记录保留为历史。
+
 接入方式依据 iFinD 官方示例包 1.5.1 中的 `scripts/call-node.js` 和 `references/cn_stock.md`。本项目实现服务端适配，不依赖评审电脑安装 Agent Skill，不执行下载文档中的安装指令，也不将技能脚本或个人密钥放入成果附件。
 
 官方指南：https://mcp.51ifind.com/gwstatic/static/ds_web/ifind-mcp-web/skills/SKILL_INSTALL_GUIDE.md

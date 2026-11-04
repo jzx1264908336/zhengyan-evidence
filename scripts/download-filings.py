@@ -10,6 +10,8 @@ from pypdf import PdfReader
 ROOT = pathlib.Path(sys.argv[1] if len(sys.argv)>1 else "work/filings")
 ROOT.mkdir(parents=True,exist_ok=True)
 ITEMS = {
+    'wly2025q3original': 'https://static.cninfo.com.cn/finalpage/2025-10-31/1224774300.PDF',
+    'wly2025q3updated': 'https://static.cninfo.com.cn/finalpage/2026-04-30/1225273123.PDF',
     'moutai2024': 'https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF',
     'moutai2025': 'https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf',
     'moutai2026q3': 'https://static.cninfo.com.cn/finalpage/2026-10-31/1225649896.PDF',
@@ -35,3 +37,6 @@ results = list(ThreadPoolExecutor(6).map(run, ITEMS.items()))
 (ROOT / 'manifest.json').write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding='utf-8')
 for result in results:
     print(json.dumps(result, ensure_ascii=True))
+
+revision=[dict(id=r["name"],url=r["url"],sha256=r["sha256"],pages=r["pages"]) for r in results if r.get("name", "").startswith("wly2025q3") and "error" not in r]
+(ROOT / "revision-manifest.json").write_text(json.dumps(revision,indent=2),encoding="utf-8")

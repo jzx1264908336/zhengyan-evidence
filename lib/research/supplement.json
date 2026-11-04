@@ -1,0 +1,5126 @@
+{
+  "version": "supplement-20261104-v2",
+  "sources": [
+    {
+      "id": "tencent_daily",
+      "title": "腾讯公开行情 · 贵州茅台前复权日线",
+      "company": "贵州茅台 / 沪深300",
+      "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600519,day,2025-11-01,2026-11-04,500,qfq",
+      "published": "2026-11-04",
+      "fetched": "2026-11-04",
+      "sha256": "6dfd886154f6e4677937928316c99cdc137e7c357a64e040c106cfd759c2abef",
+      "pages": 0,
+      "kind": "market"
+    },
+    {
+      "id": "tencent_benchmark",
+      "title": "腾讯公开行情 · 沪深300日线",
+      "company": "贵州茅台 / 沪深300",
+      "url": "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh000300,day,2025-11-01,2026-11-04,500,qfq",
+      "published": "2026-11-04",
+      "fetched": "2026-11-04",
+      "sha256": "2d655e9ed0ee0a5bf9abefa6d7eb040206d5fef32f09f34b932d9d5166453d71",
+      "pages": 0,
+      "kind": "market"
+    },
+    {
+      "id": "tencent_quote",
+      "title": "腾讯公开行情 · 同日收盘快照",
+      "company": "贵州茅台 / 沪深300",
+      "url": "https://qt.gtimg.cn/q=sh600519,sz000568,sh600809,sz000858,sh000300",
+      "published": "2026-11-04",
+      "fetched": "2026-11-04",
+      "sha256": "7080df447999fbf4e9386bd5f25974a7b2aa99982d288781ef4413ab4b59c472",
+      "pages": 0,
+      "kind": "market"
+    },
+    {
+      "id": "wly2025q3original",
+      "title": "五粮液 2025 年第三季度报告（原始版）",
+      "company": "五粮液",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-10-31/1224774300.PDF",
+      "published": "2025-10-31",
+      "fetched": "2026-11-04",
+      "sha256": "657fd49e5aa3b33b65af5ef942dc98c165f2017df4023ecf96bf5378e3ad425c",
+      "pages": 10,
+      "kind": "filing"
+    },
+    {
+      "id": "wly2025q3updated",
+      "title": "五粮液 2025 年第三季度报告（更新后）",
+      "company": "五粮液",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225273123.PDF",
+      "published": "2026-04-30",
+      "fetched": "2026-11-04",
+      "sha256": "505e447c47f70ded9bc311834d0df499768b56bbb8126876844200057f6ca500",
+      "pages": 10,
+      "kind": "filing"
+    }
+  ],
+  "observations": [
+    {
+      "id": "sh600519-close-2025-11-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1383.019",
+      "unit": "price",
+      "period": "2025-11-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-04",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1377.019",
+      "unit": "price",
+      "period": "2025-11-04",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-05",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1368.099",
+      "unit": "price",
+      "period": "2025-11-05",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-06",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1383.149",
+      "unit": "price",
+      "period": "2025-11-06",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-07",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1381.349",
+      "unit": "price",
+      "period": "2025-11-07",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-10",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1410.319",
+      "unit": "price",
+      "period": "2025-11-10",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-11",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1407.009",
+      "unit": "price",
+      "period": "2025-11-11",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-12",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1413.169",
+      "unit": "price",
+      "period": "2025-11-12",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-13",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1418.399",
+      "unit": "price",
+      "period": "2025-11-13",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-14",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1404.619",
+      "unit": "price",
+      "period": "2025-11-14",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-17",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1419.019",
+      "unit": "price",
+      "period": "2025-11-17",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-18",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1424.019",
+      "unit": "price",
+      "period": "2025-11-18",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-19",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1419.029",
+      "unit": "price",
+      "period": "2025-11-19",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-20",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1415.129",
+      "unit": "price",
+      "period": "2025-11-20",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-21",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1414.619",
+      "unit": "price",
+      "period": "2025-11-21",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-24",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1400.019",
+      "unit": "price",
+      "period": "2025-11-24",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-25",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1392.669",
+      "unit": "price",
+      "period": "2025-11-25",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-26",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1397.169",
+      "unit": "price",
+      "period": "2025-11-26",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-27",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1395.319",
+      "unit": "price",
+      "period": "2025-11-27",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-11-28",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1398.519",
+      "unit": "price",
+      "period": "2025-11-28",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-01",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1396.019",
+      "unit": "price",
+      "period": "2025-12-01",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-02",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1384.049",
+      "unit": "price",
+      "period": "2025-12-02",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1377.119",
+      "unit": "price",
+      "period": "2025-12-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-04",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1371.999",
+      "unit": "price",
+      "period": "2025-12-04",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-05",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1378.029",
+      "unit": "price",
+      "period": "2025-12-05",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-08",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1366.239",
+      "unit": "price",
+      "period": "2025-12-08",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-09",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1349.029",
+      "unit": "price",
+      "period": "2025-12-09",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-10",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1350.819",
+      "unit": "price",
+      "period": "2025-12-10",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-11",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1360.009",
+      "unit": "price",
+      "period": "2025-12-11",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-12",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1368.669",
+      "unit": "price",
+      "period": "2025-12-12",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-15",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1374.019",
+      "unit": "price",
+      "period": "2025-12-15",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-16",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1370.019",
+      "unit": "price",
+      "period": "2025-12-16",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-17",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1381.119",
+      "unit": "price",
+      "period": "2025-12-17",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-18",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1379.019",
+      "unit": "price",
+      "period": "2025-12-18",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-19",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1381.976",
+      "unit": "price",
+      "period": "2025-12-19",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-22",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1380.236",
+      "unit": "price",
+      "period": "2025-12-22",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-23",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1379.836",
+      "unit": "price",
+      "period": "2025-12-23",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-24",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1372.876",
+      "unit": "price",
+      "period": "2025-12-24",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-25",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1386.146",
+      "unit": "price",
+      "period": "2025-12-25",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-26",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1386.106",
+      "unit": "price",
+      "period": "2025-12-26",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-29",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1373.976",
+      "unit": "price",
+      "period": "2025-12-29",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-30",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1361.696",
+      "unit": "price",
+      "period": "2025-12-30",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2025-12-31",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1349.156",
+      "unit": "price",
+      "period": "2025-12-31",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-05",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1397.976",
+      "unit": "price",
+      "period": "2026-01-05",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-06",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1399.986",
+      "unit": "price",
+      "period": "2026-01-06",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-07",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1395.336",
+      "unit": "price",
+      "period": "2026-01-07",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-08",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1384.276",
+      "unit": "price",
+      "period": "2026-01-08",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-09",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1391.076",
+      "unit": "price",
+      "period": "2026-01-09",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-12",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1395.206",
+      "unit": "price",
+      "period": "2026-01-12",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-13",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1382.976",
+      "unit": "price",
+      "period": "2026-01-13",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-14",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1369.986",
+      "unit": "price",
+      "period": "2026-01-14",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-15",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1360.866",
+      "unit": "price",
+      "period": "2026-01-15",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-16",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1353.976",
+      "unit": "price",
+      "period": "2026-01-16",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-19",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1347.976",
+      "unit": "price",
+      "period": "2026-01-19",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-20",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1345.526",
+      "unit": "price",
+      "period": "2026-01-20",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-21",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1323.036",
+      "unit": "price",
+      "period": "2026-01-21",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-22",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1312.036",
+      "unit": "price",
+      "period": "2026-01-22",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-23",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1308.976",
+      "unit": "price",
+      "period": "2026-01-23",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-26",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1313.976",
+      "unit": "price",
+      "period": "2026-01-26",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-27",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1314.986",
+      "unit": "price",
+      "period": "2026-01-27",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-28",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1295.666",
+      "unit": "price",
+      "period": "2026-01-28",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-29",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1409.696",
+      "unit": "price",
+      "period": "2026-01-29",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-01-30",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1372.976",
+      "unit": "price",
+      "period": "2026-01-30",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-02",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1398.976",
+      "unit": "price",
+      "period": "2026-02-02",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1446.896",
+      "unit": "price",
+      "period": "2026-02-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-04",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1496.976",
+      "unit": "price",
+      "period": "2026-02-04",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-05",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1526.976",
+      "unit": "price",
+      "period": "2026-02-05",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-06",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1486.986",
+      "unit": "price",
+      "period": "2026-02-06",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-09",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1496.936",
+      "unit": "price",
+      "period": "2026-02-09",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-10",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1476.776",
+      "unit": "price",
+      "period": "2026-02-10",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-11",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1476.306",
+      "unit": "price",
+      "period": "2026-02-11",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-12",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1458.576",
+      "unit": "price",
+      "period": "2026-02-12",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-13",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1457.276",
+      "unit": "price",
+      "period": "2026-02-13",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-24",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1438.776",
+      "unit": "price",
+      "period": "2026-02-24",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-25",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1463.636",
+      "unit": "price",
+      "period": "2026-02-25",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-26",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1438.186",
+      "unit": "price",
+      "period": "2026-02-26",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-02-27",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1426.996",
+      "unit": "price",
+      "period": "2026-02-27",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-02",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1412.086",
+      "unit": "price",
+      "period": "2026-03-02",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1398.166",
+      "unit": "price",
+      "period": "2026-03-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-04",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1373.156",
+      "unit": "price",
+      "period": "2026-03-04",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-05",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1371.016",
+      "unit": "price",
+      "period": "2026-03-05",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-06",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1373.976",
+      "unit": "price",
+      "period": "2026-03-06",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-09",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1368.976",
+      "unit": "price",
+      "period": "2026-03-09",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-10",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1373.856",
+      "unit": "price",
+      "period": "2026-03-10",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-11",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1371.976",
+      "unit": "price",
+      "period": "2026-03-11",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-12",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1363.976",
+      "unit": "price",
+      "period": "2026-03-12",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-13",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1385.616",
+      "unit": "price",
+      "period": "2026-03-13",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-16",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1432.156",
+      "unit": "price",
+      "period": "2026-03-16",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-17",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1456.976",
+      "unit": "price",
+      "period": "2026-03-17",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-18",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1440.776",
+      "unit": "price",
+      "period": "2026-03-18",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-19",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1424.846",
+      "unit": "price",
+      "period": "2026-03-19",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-20",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1416.976",
+      "unit": "price",
+      "period": "2026-03-20",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-23",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1380.046",
+      "unit": "price",
+      "period": "2026-03-23",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-24",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1379.306",
+      "unit": "price",
+      "period": "2026-03-24",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-25",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1382.246",
+      "unit": "price",
+      "period": "2026-03-25",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-26",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1373.156",
+      "unit": "price",
+      "period": "2026-03-26",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-27",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1387.996",
+      "unit": "price",
+      "period": "2026-03-27",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-30",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1391.976",
+      "unit": "price",
+      "period": "2026-03-30",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-03-31",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1421.976",
+      "unit": "price",
+      "period": "2026-03-31",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-01",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1431.416",
+      "unit": "price",
+      "period": "2026-04-01",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-02",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1431.856",
+      "unit": "price",
+      "period": "2026-04-02",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1431.976",
+      "unit": "price",
+      "period": "2026-04-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-07",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1411.996",
+      "unit": "price",
+      "period": "2026-04-07",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-08",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1436.996",
+      "unit": "price",
+      "period": "2026-04-08",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-09",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1432.466",
+      "unit": "price",
+      "period": "2026-04-09",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-10",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1425.936",
+      "unit": "price",
+      "period": "2026-04-10",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-13",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1415.286",
+      "unit": "price",
+      "period": "2026-04-13",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-14",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1418.876",
+      "unit": "price",
+      "period": "2026-04-14",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-15",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1439.476",
+      "unit": "price",
+      "period": "2026-04-15",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-16",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1434.816",
+      "unit": "price",
+      "period": "2026-04-16",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-17",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1379.216",
+      "unit": "price",
+      "period": "2026-04-17",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-20",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1382.866",
+      "unit": "price",
+      "period": "2026-04-20",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-21",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1383.986",
+      "unit": "price",
+      "period": "2026-04-21",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-22",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1381.476",
+      "unit": "price",
+      "period": "2026-04-22",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-23",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1390.976",
+      "unit": "price",
+      "period": "2026-04-23",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-24",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1430.466",
+      "unit": "price",
+      "period": "2026-04-24",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-27",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1375.176",
+      "unit": "price",
+      "period": "2026-04-27",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-28",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1376.976",
+      "unit": "price",
+      "period": "2026-04-28",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-29",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1373.146",
+      "unit": "price",
+      "period": "2026-04-29",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-04-30",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1356.766",
+      "unit": "price",
+      "period": "2026-04-30",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-06",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1346.976",
+      "unit": "price",
+      "period": "2026-05-06",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-07",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1343.026",
+      "unit": "price",
+      "period": "2026-05-07",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-08",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1344.966",
+      "unit": "price",
+      "period": "2026-05-08",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-11",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1333.306",
+      "unit": "price",
+      "period": "2026-05-11",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-12",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1326.526",
+      "unit": "price",
+      "period": "2026-05-12",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-13",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1316.066",
+      "unit": "price",
+      "period": "2026-05-13",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-14",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1314.146",
+      "unit": "price",
+      "period": "2026-05-14",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-15",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1304.926",
+      "unit": "price",
+      "period": "2026-05-15",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-18",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1294.976",
+      "unit": "price",
+      "period": "2026-05-18",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-19",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1296.276",
+      "unit": "price",
+      "period": "2026-05-19",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-20",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1286.976",
+      "unit": "price",
+      "period": "2026-05-20",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-21",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1282.976",
+      "unit": "price",
+      "period": "2026-05-21",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-22",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1262.176",
+      "unit": "price",
+      "period": "2026-05-22",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-25",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1257.856",
+      "unit": "price",
+      "period": "2026-05-25",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-26",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1245.356",
+      "unit": "price",
+      "period": "2026-05-26",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-27",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1274.976",
+      "unit": "price",
+      "period": "2026-05-27",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-28",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1247.956",
+      "unit": "price",
+      "period": "2026-05-28",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-05-29",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1297.976",
+      "unit": "price",
+      "period": "2026-05-29",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-01",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1281.576",
+      "unit": "price",
+      "period": "2026-06-01",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-02",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1279.196",
+      "unit": "price",
+      "period": "2026-06-02",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1253.886",
+      "unit": "price",
+      "period": "2026-06-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-04",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1239.976",
+      "unit": "price",
+      "period": "2026-06-04",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-05",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1244.836",
+      "unit": "price",
+      "period": "2026-06-05",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-08",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1234.956",
+      "unit": "price",
+      "period": "2026-06-08",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-09",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1227.976",
+      "unit": "price",
+      "period": "2026-06-09",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-10",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1247.856",
+      "unit": "price",
+      "period": "2026-06-10",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-11",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1250.976",
+      "unit": "price",
+      "period": "2026-06-11",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-12",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1263.886",
+      "unit": "price",
+      "period": "2026-06-12",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-15",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1243.076",
+      "unit": "price",
+      "period": "2026-06-15",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-16",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1227.646",
+      "unit": "price",
+      "period": "2026-06-16",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-17",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1211.976",
+      "unit": "price",
+      "period": "2026-06-17",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-18",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1186.976",
+      "unit": "price",
+      "period": "2026-06-18",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-22",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1213.386",
+      "unit": "price",
+      "period": "2026-06-22",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-23",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1194.426",
+      "unit": "price",
+      "period": "2026-06-23",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-24",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1179.656",
+      "unit": "price",
+      "period": "2026-06-24",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-25",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1184.076",
+      "unit": "price",
+      "period": "2026-06-25",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-26",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1168.630",
+      "unit": "price",
+      "period": "2026-06-26",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-29",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1194.960",
+      "unit": "price",
+      "period": "2026-06-29",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-06-30",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1185.490",
+      "unit": "price",
+      "period": "2026-06-30",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-01",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1193.010",
+      "unit": "price",
+      "period": "2026-07-01",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-02",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1203.000",
+      "unit": "price",
+      "period": "2026-07-02",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1194.450",
+      "unit": "price",
+      "period": "2026-07-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-06",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1206.910",
+      "unit": "price",
+      "period": "2026-07-06",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-07",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1188.800",
+      "unit": "price",
+      "period": "2026-07-07",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-08",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1199.300",
+      "unit": "price",
+      "period": "2026-07-08",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-09",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1182.190",
+      "unit": "price",
+      "period": "2026-07-09",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-10",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1204.980",
+      "unit": "price",
+      "period": "2026-07-10",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-13",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1210.990",
+      "unit": "price",
+      "period": "2026-07-13",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-14",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1214.880",
+      "unit": "price",
+      "period": "2026-07-14",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-15",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1251.060",
+      "unit": "price",
+      "period": "2026-07-15",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-16",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1258.990",
+      "unit": "price",
+      "period": "2026-07-16",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-17",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1253.000",
+      "unit": "price",
+      "period": "2026-07-17",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-20",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1327.500",
+      "unit": "price",
+      "period": "2026-07-20",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-21",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1308.000",
+      "unit": "price",
+      "period": "2026-07-21",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-22",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1305.000",
+      "unit": "price",
+      "period": "2026-07-22",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-23",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1292.010",
+      "unit": "price",
+      "period": "2026-07-23",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-24",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1297.410",
+      "unit": "price",
+      "period": "2026-07-24",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-27",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1289.500",
+      "unit": "price",
+      "period": "2026-07-27",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-28",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1320.000",
+      "unit": "price",
+      "period": "2026-07-28",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-29",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1321.000",
+      "unit": "price",
+      "period": "2026-07-29",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-30",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1361.760",
+      "unit": "price",
+      "period": "2026-07-30",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-07-31",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1350.600",
+      "unit": "price",
+      "period": "2026-07-31",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1358.980",
+      "unit": "price",
+      "period": "2026-08-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-04",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1328.360",
+      "unit": "price",
+      "period": "2026-08-04",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-05",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1306.450",
+      "unit": "price",
+      "period": "2026-08-05",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-06",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1308.550",
+      "unit": "price",
+      "period": "2026-08-06",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-07",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1309.220",
+      "unit": "price",
+      "period": "2026-08-07",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-10",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1348.860",
+      "unit": "price",
+      "period": "2026-08-10",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-11",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1346.500",
+      "unit": "price",
+      "period": "2026-08-11",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-12",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1343.000",
+      "unit": "price",
+      "period": "2026-08-12",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-13",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1355.290",
+      "unit": "price",
+      "period": "2026-08-13",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-14",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1341.990",
+      "unit": "price",
+      "period": "2026-08-14",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-17",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1293.090",
+      "unit": "price",
+      "period": "2026-08-17",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-18",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1297.990",
+      "unit": "price",
+      "period": "2026-08-18",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-19",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1307.880",
+      "unit": "price",
+      "period": "2026-08-19",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-20",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1291.500",
+      "unit": "price",
+      "period": "2026-08-20",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-21",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1272.830",
+      "unit": "price",
+      "period": "2026-08-21",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-24",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1304.660",
+      "unit": "price",
+      "period": "2026-08-24",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-25",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1304.000",
+      "unit": "price",
+      "period": "2026-08-25",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-26",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1302.800",
+      "unit": "price",
+      "period": "2026-08-26",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-27",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1292.300",
+      "unit": "price",
+      "period": "2026-08-27",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-28",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1297.400",
+      "unit": "price",
+      "period": "2026-08-28",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-08-31",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1299.520",
+      "unit": "price",
+      "period": "2026-08-31",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-01",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1299.560",
+      "unit": "price",
+      "period": "2026-09-01",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-02",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1297.500",
+      "unit": "price",
+      "period": "2026-09-02",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1298.880",
+      "unit": "price",
+      "period": "2026-09-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-04",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1330.000",
+      "unit": "price",
+      "period": "2026-09-04",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-07",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1316.010",
+      "unit": "price",
+      "period": "2026-09-07",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-08",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1309.300",
+      "unit": "price",
+      "period": "2026-09-08",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-09",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1290.880",
+      "unit": "price",
+      "period": "2026-09-09",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-10",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1285.130",
+      "unit": "price",
+      "period": "2026-09-10",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-11",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1275.160",
+      "unit": "price",
+      "period": "2026-09-11",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-14",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1277.960",
+      "unit": "price",
+      "period": "2026-09-14",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-15",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1272.750",
+      "unit": "price",
+      "period": "2026-09-15",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-16",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1258.000",
+      "unit": "price",
+      "period": "2026-09-16",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-17",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1266.980",
+      "unit": "price",
+      "period": "2026-09-17",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-18",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1257.120",
+      "unit": "price",
+      "period": "2026-09-18",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-21",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1252.570",
+      "unit": "price",
+      "period": "2026-09-21",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-22",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1253.800",
+      "unit": "price",
+      "period": "2026-09-22",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-23",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1251.240",
+      "unit": "price",
+      "period": "2026-09-23",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-24",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1237.000",
+      "unit": "price",
+      "period": "2026-09-24",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-28",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1243.880",
+      "unit": "price",
+      "period": "2026-09-28",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-29",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1235.580",
+      "unit": "price",
+      "period": "2026-09-29",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-09-30",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1258.620",
+      "unit": "price",
+      "period": "2026-09-30",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-08",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1255.790",
+      "unit": "price",
+      "period": "2026-10-08",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-09",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1263.000",
+      "unit": "price",
+      "period": "2026-10-09",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-12",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1288.000",
+      "unit": "price",
+      "period": "2026-10-12",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-13",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1274.890",
+      "unit": "price",
+      "period": "2026-10-13",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-14",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1286.000",
+      "unit": "price",
+      "period": "2026-10-14",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-15",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1312.970",
+      "unit": "price",
+      "period": "2026-10-15",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-16",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1329.000",
+      "unit": "price",
+      "period": "2026-10-16",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-19",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1324.970",
+      "unit": "price",
+      "period": "2026-10-19",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-20",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1331.880",
+      "unit": "price",
+      "period": "2026-10-20",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-21",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1309.690",
+      "unit": "price",
+      "period": "2026-10-21",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-22",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1318.490",
+      "unit": "price",
+      "period": "2026-10-22",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-23",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1335.000",
+      "unit": "price",
+      "period": "2026-10-23",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-26",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1349.980",
+      "unit": "price",
+      "period": "2026-10-26",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-27",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1355.900",
+      "unit": "price",
+      "period": "2026-10-27",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-28",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1330.750",
+      "unit": "price",
+      "period": "2026-10-28",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-29",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1354.000",
+      "unit": "price",
+      "period": "2026-10-29",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-10-30",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1392.050",
+      "unit": "price",
+      "period": "2026-10-30",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-11-02",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1439.100",
+      "unit": "price",
+      "period": "2026-11-02",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-11-03",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1480.000",
+      "unit": "price",
+      "period": "2026-11-03",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh600519-close-2026-11-04",
+      "label": "贵州茅台前复权收盘价",
+      "raw": "1446.440",
+      "unit": "price",
+      "period": "2026-11-04",
+      "sourceId": "tencent_daily",
+      "page": 0,
+      "scope": "前复权（供应商 qfqday）"
+    },
+    {
+      "id": "sh000300-close-2025-11-03",
+      "label": "沪深300收盘点位",
+      "raw": "4653.400",
+      "unit": "index",
+      "period": "2025-11-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-04",
+      "label": "沪深300收盘点位",
+      "raw": "4618.700",
+      "unit": "index",
+      "period": "2025-11-04",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-05",
+      "label": "沪深300收盘点位",
+      "raw": "4627.260",
+      "unit": "index",
+      "period": "2025-11-05",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-06",
+      "label": "沪深300收盘点位",
+      "raw": "4693.400",
+      "unit": "index",
+      "period": "2025-11-06",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-07",
+      "label": "沪深300收盘点位",
+      "raw": "4678.790",
+      "unit": "index",
+      "period": "2025-11-07",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-10",
+      "label": "沪深300收盘点位",
+      "raw": "4695.050",
+      "unit": "index",
+      "period": "2025-11-10",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-11",
+      "label": "沪深300收盘点位",
+      "raw": "4652.170",
+      "unit": "index",
+      "period": "2025-11-11",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-12",
+      "label": "沪深300收盘点位",
+      "raw": "4645.910",
+      "unit": "index",
+      "period": "2025-11-12",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-13",
+      "label": "沪深300收盘点位",
+      "raw": "4702.070",
+      "unit": "index",
+      "period": "2025-11-13",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-14",
+      "label": "沪深300收盘点位",
+      "raw": "4628.140",
+      "unit": "index",
+      "period": "2025-11-14",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-17",
+      "label": "沪深300收盘点位",
+      "raw": "4598.050",
+      "unit": "index",
+      "period": "2025-11-17",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-18",
+      "label": "沪深300收盘点位",
+      "raw": "4568.190",
+      "unit": "index",
+      "period": "2025-11-18",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-19",
+      "label": "沪深300收盘点位",
+      "raw": "4588.290",
+      "unit": "index",
+      "period": "2025-11-19",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-20",
+      "label": "沪深300收盘点位",
+      "raw": "4564.950",
+      "unit": "index",
+      "period": "2025-11-20",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-21",
+      "label": "沪深300收盘点位",
+      "raw": "4453.610",
+      "unit": "index",
+      "period": "2025-11-21",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-24",
+      "label": "沪深300收盘点位",
+      "raw": "4448.050",
+      "unit": "index",
+      "period": "2025-11-24",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-25",
+      "label": "沪深300收盘点位",
+      "raw": "4490.400",
+      "unit": "index",
+      "period": "2025-11-25",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-26",
+      "label": "沪深300收盘点位",
+      "raw": "4517.630",
+      "unit": "index",
+      "period": "2025-11-26",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-27",
+      "label": "沪深300收盘点位",
+      "raw": "4515.400",
+      "unit": "index",
+      "period": "2025-11-27",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-11-28",
+      "label": "沪深300收盘点位",
+      "raw": "4526.660",
+      "unit": "index",
+      "period": "2025-11-28",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-01",
+      "label": "沪深300收盘点位",
+      "raw": "4576.490",
+      "unit": "index",
+      "period": "2025-12-01",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-02",
+      "label": "沪深300收盘点位",
+      "raw": "4554.330",
+      "unit": "index",
+      "period": "2025-12-02",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-03",
+      "label": "沪深300收盘点位",
+      "raw": "4531.050",
+      "unit": "index",
+      "period": "2025-12-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-04",
+      "label": "沪深300收盘点位",
+      "raw": "4546.570",
+      "unit": "index",
+      "period": "2025-12-04",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-05",
+      "label": "沪深300收盘点位",
+      "raw": "4584.540",
+      "unit": "index",
+      "period": "2025-12-05",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-08",
+      "label": "沪深300收盘点位",
+      "raw": "4621.750",
+      "unit": "index",
+      "period": "2025-12-08",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-09",
+      "label": "沪深300收盘点位",
+      "raw": "4598.220",
+      "unit": "index",
+      "period": "2025-12-09",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-10",
+      "label": "沪深300收盘点位",
+      "raw": "4591.830",
+      "unit": "index",
+      "period": "2025-12-10",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-11",
+      "label": "沪深300收盘点位",
+      "raw": "4552.180",
+      "unit": "index",
+      "period": "2025-12-11",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-12",
+      "label": "沪深300收盘点位",
+      "raw": "4580.950",
+      "unit": "index",
+      "period": "2025-12-12",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-15",
+      "label": "沪深300收盘点位",
+      "raw": "4552.060",
+      "unit": "index",
+      "period": "2025-12-15",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-16",
+      "label": "沪深300收盘点位",
+      "raw": "4497.550",
+      "unit": "index",
+      "period": "2025-12-16",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-17",
+      "label": "沪深300收盘点位",
+      "raw": "4579.880",
+      "unit": "index",
+      "period": "2025-12-17",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-18",
+      "label": "沪深300收盘点位",
+      "raw": "4552.790",
+      "unit": "index",
+      "period": "2025-12-18",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-19",
+      "label": "沪深300收盘点位",
+      "raw": "4568.180",
+      "unit": "index",
+      "period": "2025-12-19",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-22",
+      "label": "沪深300收盘点位",
+      "raw": "4611.620",
+      "unit": "index",
+      "period": "2025-12-22",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-23",
+      "label": "沪深300收盘点位",
+      "raw": "4620.730",
+      "unit": "index",
+      "period": "2025-12-23",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-24",
+      "label": "沪深300收盘点位",
+      "raw": "4634.060",
+      "unit": "index",
+      "period": "2025-12-24",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-25",
+      "label": "沪深300收盘点位",
+      "raw": "4642.540",
+      "unit": "index",
+      "period": "2025-12-25",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-26",
+      "label": "沪深300收盘点位",
+      "raw": "4657.240",
+      "unit": "index",
+      "period": "2025-12-26",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-29",
+      "label": "沪深300收盘点位",
+      "raw": "4639.370",
+      "unit": "index",
+      "period": "2025-12-29",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-30",
+      "label": "沪深300收盘点位",
+      "raw": "4651.280",
+      "unit": "index",
+      "period": "2025-12-30",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2025-12-31",
+      "label": "沪深300收盘点位",
+      "raw": "4629.940",
+      "unit": "index",
+      "period": "2025-12-31",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-05",
+      "label": "沪深300收盘点位",
+      "raw": "4717.750",
+      "unit": "index",
+      "period": "2026-01-05",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-06",
+      "label": "沪深300收盘点位",
+      "raw": "4790.690",
+      "unit": "index",
+      "period": "2026-01-06",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-07",
+      "label": "沪深300收盘点位",
+      "raw": "4776.670",
+      "unit": "index",
+      "period": "2026-01-07",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-08",
+      "label": "沪深300收盘点位",
+      "raw": "4737.650",
+      "unit": "index",
+      "period": "2026-01-08",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-09",
+      "label": "沪深300收盘点位",
+      "raw": "4758.920",
+      "unit": "index",
+      "period": "2026-01-09",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-12",
+      "label": "沪深300收盘点位",
+      "raw": "4789.920",
+      "unit": "index",
+      "period": "2026-01-12",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-13",
+      "label": "沪深300收盘点位",
+      "raw": "4761.030",
+      "unit": "index",
+      "period": "2026-01-13",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-14",
+      "label": "沪深300收盘点位",
+      "raw": "4741.930",
+      "unit": "index",
+      "period": "2026-01-14",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-15",
+      "label": "沪深300收盘点位",
+      "raw": "4751.430",
+      "unit": "index",
+      "period": "2026-01-15",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-16",
+      "label": "沪深300收盘点位",
+      "raw": "4731.870",
+      "unit": "index",
+      "period": "2026-01-16",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-19",
+      "label": "沪深300收盘点位",
+      "raw": "4734.460",
+      "unit": "index",
+      "period": "2026-01-19",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-20",
+      "label": "沪深300收盘点位",
+      "raw": "4718.880",
+      "unit": "index",
+      "period": "2026-01-20",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-21",
+      "label": "沪深300收盘点位",
+      "raw": "4723.070",
+      "unit": "index",
+      "period": "2026-01-21",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-22",
+      "label": "沪深300收盘点位",
+      "raw": "4723.710",
+      "unit": "index",
+      "period": "2026-01-22",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-23",
+      "label": "沪深300收盘点位",
+      "raw": "4702.500",
+      "unit": "index",
+      "period": "2026-01-23",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-26",
+      "label": "沪深300收盘点位",
+      "raw": "4706.960",
+      "unit": "index",
+      "period": "2026-01-26",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-27",
+      "label": "沪深300收盘点位",
+      "raw": "4705.690",
+      "unit": "index",
+      "period": "2026-01-27",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-28",
+      "label": "沪深300收盘点位",
+      "raw": "4717.990",
+      "unit": "index",
+      "period": "2026-01-28",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-29",
+      "label": "沪深300收盘点位",
+      "raw": "4753.870",
+      "unit": "index",
+      "period": "2026-01-29",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-01-30",
+      "label": "沪深300收盘点位",
+      "raw": "4706.340",
+      "unit": "index",
+      "period": "2026-01-30",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-02",
+      "label": "沪深300收盘点位",
+      "raw": "4605.980",
+      "unit": "index",
+      "period": "2026-02-02",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-03",
+      "label": "沪深300收盘点位",
+      "raw": "4660.110",
+      "unit": "index",
+      "period": "2026-02-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-04",
+      "label": "沪深300收盘点位",
+      "raw": "4698.680",
+      "unit": "index",
+      "period": "2026-02-04",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-05",
+      "label": "沪深300收盘点位",
+      "raw": "4670.420",
+      "unit": "index",
+      "period": "2026-02-05",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-06",
+      "label": "沪深300收盘点位",
+      "raw": "4643.600",
+      "unit": "index",
+      "period": "2026-02-06",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-09",
+      "label": "沪深300收盘点位",
+      "raw": "4719.060",
+      "unit": "index",
+      "period": "2026-02-09",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-10",
+      "label": "沪深300收盘点位",
+      "raw": "4724.300",
+      "unit": "index",
+      "period": "2026-02-10",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-11",
+      "label": "沪深300收盘点位",
+      "raw": "4713.820",
+      "unit": "index",
+      "period": "2026-02-11",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-12",
+      "label": "沪深300收盘点位",
+      "raw": "4719.580",
+      "unit": "index",
+      "period": "2026-02-12",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-13",
+      "label": "沪深300收盘点位",
+      "raw": "4660.410",
+      "unit": "index",
+      "period": "2026-02-13",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-24",
+      "label": "沪深300收盘点位",
+      "raw": "4707.540",
+      "unit": "index",
+      "period": "2026-02-24",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-25",
+      "label": "沪深300收盘点位",
+      "raw": "4735.890",
+      "unit": "index",
+      "period": "2026-02-25",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-26",
+      "label": "沪深300收盘点位",
+      "raw": "4726.870",
+      "unit": "index",
+      "period": "2026-02-26",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-02-27",
+      "label": "沪深300收盘点位",
+      "raw": "4710.650",
+      "unit": "index",
+      "period": "2026-02-27",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-02",
+      "label": "沪深300收盘点位",
+      "raw": "4728.670",
+      "unit": "index",
+      "period": "2026-03-02",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-03",
+      "label": "沪深300收盘点位",
+      "raw": "4655.900",
+      "unit": "index",
+      "period": "2026-03-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-04",
+      "label": "沪深300收盘点位",
+      "raw": "4602.620",
+      "unit": "index",
+      "period": "2026-03-04",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-05",
+      "label": "沪深300收盘点位",
+      "raw": "4647.690",
+      "unit": "index",
+      "period": "2026-03-05",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-06",
+      "label": "沪深300收盘点位",
+      "raw": "4660.440",
+      "unit": "index",
+      "period": "2026-03-06",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-09",
+      "label": "沪深300收盘点位",
+      "raw": "4615.460",
+      "unit": "index",
+      "period": "2026-03-09",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-10",
+      "label": "沪深300收盘点位",
+      "raw": "4674.760",
+      "unit": "index",
+      "period": "2026-03-10",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-11",
+      "label": "沪深300收盘点位",
+      "raw": "4704.500",
+      "unit": "index",
+      "period": "2026-03-11",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-12",
+      "label": "沪深300收盘点位",
+      "raw": "4687.560",
+      "unit": "index",
+      "period": "2026-03-12",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-13",
+      "label": "沪深300收盘点位",
+      "raw": "4669.140",
+      "unit": "index",
+      "period": "2026-03-13",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-16",
+      "label": "沪深300收盘点位",
+      "raw": "4671.560",
+      "unit": "index",
+      "period": "2026-03-16",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-17",
+      "label": "沪深300收盘点位",
+      "raw": "4637.440",
+      "unit": "index",
+      "period": "2026-03-17",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-18",
+      "label": "沪深300收盘点位",
+      "raw": "4658.330",
+      "unit": "index",
+      "period": "2026-03-18",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-19",
+      "label": "沪深300收盘点位",
+      "raw": "4583.250",
+      "unit": "index",
+      "period": "2026-03-19",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-20",
+      "label": "沪深300收盘点位",
+      "raw": "4567.020",
+      "unit": "index",
+      "period": "2026-03-20",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-23",
+      "label": "沪深300收盘点位",
+      "raw": "4418.000",
+      "unit": "index",
+      "period": "2026-03-23",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-24",
+      "label": "沪深300收盘点位",
+      "raw": "4474.720",
+      "unit": "index",
+      "period": "2026-03-24",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-25",
+      "label": "沪深300收盘点位",
+      "raw": "4537.470",
+      "unit": "index",
+      "period": "2026-03-25",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-26",
+      "label": "沪深300收盘点位",
+      "raw": "4477.530",
+      "unit": "index",
+      "period": "2026-03-26",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-27",
+      "label": "沪深300收盘点位",
+      "raw": "4502.570",
+      "unit": "index",
+      "period": "2026-03-27",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-30",
+      "label": "沪深300收盘点位",
+      "raw": "4491.950",
+      "unit": "index",
+      "period": "2026-03-30",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-03-31",
+      "label": "沪深300收盘点位",
+      "raw": "4450.050",
+      "unit": "index",
+      "period": "2026-03-31",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-01",
+      "label": "沪深300收盘点位",
+      "raw": "4526.070",
+      "unit": "index",
+      "period": "2026-04-01",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-02",
+      "label": "沪深300收盘点位",
+      "raw": "4478.910",
+      "unit": "index",
+      "period": "2026-04-02",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-03",
+      "label": "沪深300收盘点位",
+      "raw": "4440.790",
+      "unit": "index",
+      "period": "2026-04-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-07",
+      "label": "沪深300收盘点位",
+      "raw": "4440.620",
+      "unit": "index",
+      "period": "2026-04-07",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-08",
+      "label": "沪深300收盘点位",
+      "raw": "4595.560",
+      "unit": "index",
+      "period": "2026-04-08",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-09",
+      "label": "沪深300收盘点位",
+      "raw": "4566.220",
+      "unit": "index",
+      "period": "2026-04-09",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-10",
+      "label": "沪深300收盘点位",
+      "raw": "4636.570",
+      "unit": "index",
+      "period": "2026-04-10",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-13",
+      "label": "沪深300收盘点位",
+      "raw": "4646.150",
+      "unit": "index",
+      "period": "2026-04-13",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-14",
+      "label": "沪深300收盘点位",
+      "raw": "4701.280",
+      "unit": "index",
+      "period": "2026-04-14",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-15",
+      "label": "沪深300收盘点位",
+      "raw": "4685.250",
+      "unit": "index",
+      "period": "2026-04-15",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-16",
+      "label": "沪深300收盘点位",
+      "raw": "4736.610",
+      "unit": "index",
+      "period": "2026-04-16",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-17",
+      "label": "沪深300收盘点位",
+      "raw": "4728.670",
+      "unit": "index",
+      "period": "2026-04-17",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-20",
+      "label": "沪深300收盘点位",
+      "raw": "4757.440",
+      "unit": "index",
+      "period": "2026-04-20",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-21",
+      "label": "沪深300收盘点位",
+      "raw": "4768.000",
+      "unit": "index",
+      "period": "2026-04-21",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-22",
+      "label": "沪深300收盘点位",
+      "raw": "4799.630",
+      "unit": "index",
+      "period": "2026-04-22",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-23",
+      "label": "沪深300收盘点位",
+      "raw": "4786.330",
+      "unit": "index",
+      "period": "2026-04-23",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-24",
+      "label": "沪深300收盘点位",
+      "raw": "4769.370",
+      "unit": "index",
+      "period": "2026-04-24",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-27",
+      "label": "沪深300收盘点位",
+      "raw": "4770.950",
+      "unit": "index",
+      "period": "2026-04-27",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-28",
+      "label": "沪深300收盘点位",
+      "raw": "4758.210",
+      "unit": "index",
+      "period": "2026-04-28",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-29",
+      "label": "沪深300收盘点位",
+      "raw": "4810.350",
+      "unit": "index",
+      "period": "2026-04-29",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-04-30",
+      "label": "沪深300收盘点位",
+      "raw": "4807.310",
+      "unit": "index",
+      "period": "2026-04-30",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-06",
+      "label": "沪深300收盘点位",
+      "raw": "4877.090",
+      "unit": "index",
+      "period": "2026-05-06",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-07",
+      "label": "沪深300收盘点位",
+      "raw": "4900.510",
+      "unit": "index",
+      "period": "2026-05-07",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-08",
+      "label": "沪深300收盘点位",
+      "raw": "4871.910",
+      "unit": "index",
+      "period": "2026-05-08",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-11",
+      "label": "沪深300收盘点位",
+      "raw": "4951.840",
+      "unit": "index",
+      "period": "2026-05-11",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-12",
+      "label": "沪深300收盘点位",
+      "raw": "4948.050",
+      "unit": "index",
+      "period": "2026-05-12",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-13",
+      "label": "沪深300收盘点位",
+      "raw": "4998.340",
+      "unit": "index",
+      "period": "2026-05-13",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-14",
+      "label": "沪深300收盘点位",
+      "raw": "4914.600",
+      "unit": "index",
+      "period": "2026-05-14",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-15",
+      "label": "沪深300收盘点位",
+      "raw": "4859.590",
+      "unit": "index",
+      "period": "2026-05-15",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-18",
+      "label": "沪深300收盘点位",
+      "raw": "4833.520",
+      "unit": "index",
+      "period": "2026-05-18",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-19",
+      "label": "沪深300收盘点位",
+      "raw": "4852.880",
+      "unit": "index",
+      "period": "2026-05-19",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-20",
+      "label": "沪深300收盘点位",
+      "raw": "4850.700",
+      "unit": "index",
+      "period": "2026-05-20",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-21",
+      "label": "沪深300收盘点位",
+      "raw": "4783.100",
+      "unit": "index",
+      "period": "2026-05-21",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-22",
+      "label": "沪深300收盘点位",
+      "raw": "4845.100",
+      "unit": "index",
+      "period": "2026-05-22",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-25",
+      "label": "沪深300收盘点位",
+      "raw": "4921.600",
+      "unit": "index",
+      "period": "2026-05-25",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-26",
+      "label": "沪深300收盘点位",
+      "raw": "4947.850",
+      "unit": "index",
+      "period": "2026-05-26",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-27",
+      "label": "沪深300收盘点位",
+      "raw": "4908.170",
+      "unit": "index",
+      "period": "2026-05-27",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-28",
+      "label": "沪深300收盘点位",
+      "raw": "4914.210",
+      "unit": "index",
+      "period": "2026-05-28",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-05-29",
+      "label": "沪深300收盘点位",
+      "raw": "4892.120",
+      "unit": "index",
+      "period": "2026-05-29",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-01",
+      "label": "沪深300收盘点位",
+      "raw": "4844.260",
+      "unit": "index",
+      "period": "2026-06-01",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-02",
+      "label": "沪深300收盘点位",
+      "raw": "4914.560",
+      "unit": "index",
+      "period": "2026-06-02",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-03",
+      "label": "沪深300收盘点位",
+      "raw": "4938.810",
+      "unit": "index",
+      "period": "2026-06-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-04",
+      "label": "沪深300收盘点位",
+      "raw": "4904.750",
+      "unit": "index",
+      "period": "2026-06-04",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-05",
+      "label": "沪深300收盘点位",
+      "raw": "4816.920",
+      "unit": "index",
+      "period": "2026-06-05",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-08",
+      "label": "沪深300收盘点位",
+      "raw": "4713.640",
+      "unit": "index",
+      "period": "2026-06-08",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-09",
+      "label": "沪深300收盘点位",
+      "raw": "4801.810",
+      "unit": "index",
+      "period": "2026-06-09",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-10",
+      "label": "沪深300收盘点位",
+      "raw": "4748.590",
+      "unit": "index",
+      "period": "2026-06-10",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-11",
+      "label": "沪深300收盘点位",
+      "raw": "4722.410",
+      "unit": "index",
+      "period": "2026-06-11",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-12",
+      "label": "沪深300收盘点位",
+      "raw": "4777.320",
+      "unit": "index",
+      "period": "2026-06-12",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-15",
+      "label": "沪深300收盘点位",
+      "raw": "4891.710",
+      "unit": "index",
+      "period": "2026-06-15",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-16",
+      "label": "沪深300收盘点位",
+      "raw": "4884.230",
+      "unit": "index",
+      "period": "2026-06-16",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-17",
+      "label": "沪深300收盘点位",
+      "raw": "4931.390",
+      "unit": "index",
+      "period": "2026-06-17",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-18",
+      "label": "沪深300收盘点位",
+      "raw": "4941.600",
+      "unit": "index",
+      "period": "2026-06-18",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-22",
+      "label": "沪深300收盘点位",
+      "raw": "5059.660",
+      "unit": "index",
+      "period": "2026-06-22",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-23",
+      "label": "沪深300收盘点位",
+      "raw": "4919.390",
+      "unit": "index",
+      "period": "2026-06-23",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-24",
+      "label": "沪深300收盘点位",
+      "raw": "4943.020",
+      "unit": "index",
+      "period": "2026-06-24",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-25",
+      "label": "沪深300收盘点位",
+      "raw": "5020.100",
+      "unit": "index",
+      "period": "2026-06-25",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-26",
+      "label": "沪深300收盘点位",
+      "raw": "4868.220",
+      "unit": "index",
+      "period": "2026-06-26",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-29",
+      "label": "沪深300收盘点位",
+      "raw": "4926.920",
+      "unit": "index",
+      "period": "2026-06-29",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-06-30",
+      "label": "沪深300收盘点位",
+      "raw": "4979.430",
+      "unit": "index",
+      "period": "2026-06-30",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-01",
+      "label": "沪深300收盘点位",
+      "raw": "4958.980",
+      "unit": "index",
+      "period": "2026-07-01",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-02",
+      "label": "沪深300收盘点位",
+      "raw": "4812.300",
+      "unit": "index",
+      "period": "2026-07-02",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-03",
+      "label": "沪深300收盘点位",
+      "raw": "4842.170",
+      "unit": "index",
+      "period": "2026-07-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-06",
+      "label": "沪深300收盘点位",
+      "raw": "4842.000",
+      "unit": "index",
+      "period": "2026-07-06",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-07",
+      "label": "沪深300收盘点位",
+      "raw": "4792.260",
+      "unit": "index",
+      "period": "2026-07-07",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-08",
+      "label": "沪深300收盘点位",
+      "raw": "4755.530",
+      "unit": "index",
+      "period": "2026-07-08",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-09",
+      "label": "沪深300收盘点位",
+      "raw": "4876.310",
+      "unit": "index",
+      "period": "2026-07-09",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-10",
+      "label": "沪深300收盘点位",
+      "raw": "4780.790",
+      "unit": "index",
+      "period": "2026-07-10",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-13",
+      "label": "沪深300收盘点位",
+      "raw": "4695.380",
+      "unit": "index",
+      "period": "2026-07-13",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-14",
+      "label": "沪深300收盘点位",
+      "raw": "4796.500",
+      "unit": "index",
+      "period": "2026-07-14",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-15",
+      "label": "沪深300收盘点位",
+      "raw": "4786.780",
+      "unit": "index",
+      "period": "2026-07-15",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-16",
+      "label": "沪深300收盘点位",
+      "raw": "4698.430",
+      "unit": "index",
+      "period": "2026-07-16",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-17",
+      "label": "沪深300收盘点位",
+      "raw": "4529.100",
+      "unit": "index",
+      "period": "2026-07-17",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-20",
+      "label": "沪深300收盘点位",
+      "raw": "4598.320",
+      "unit": "index",
+      "period": "2026-07-20",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-21",
+      "label": "沪深300收盘点位",
+      "raw": "4739.230",
+      "unit": "index",
+      "period": "2026-07-21",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-22",
+      "label": "沪深300收盘点位",
+      "raw": "4717.240",
+      "unit": "index",
+      "period": "2026-07-22",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-23",
+      "label": "沪深300收盘点位",
+      "raw": "4728.000",
+      "unit": "index",
+      "period": "2026-07-23",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-24",
+      "label": "沪深300收盘点位",
+      "raw": "4649.190",
+      "unit": "index",
+      "period": "2026-07-24",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-27",
+      "label": "沪深300收盘点位",
+      "raw": "4702.430",
+      "unit": "index",
+      "period": "2026-07-27",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-28",
+      "label": "沪深300收盘点位",
+      "raw": "4569.520",
+      "unit": "index",
+      "period": "2026-07-28",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-29",
+      "label": "沪深300收盘点位",
+      "raw": "4600.260",
+      "unit": "index",
+      "period": "2026-07-29",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-30",
+      "label": "沪深300收盘点位",
+      "raw": "4549.720",
+      "unit": "index",
+      "period": "2026-07-30",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-07-31",
+      "label": "沪深300收盘点位",
+      "raw": "4588.200",
+      "unit": "index",
+      "period": "2026-07-31",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-03",
+      "label": "沪深300收盘点位",
+      "raw": "4543.180",
+      "unit": "index",
+      "period": "2026-08-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-04",
+      "label": "沪深300收盘点位",
+      "raw": "4600.930",
+      "unit": "index",
+      "period": "2026-08-04",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-05",
+      "label": "沪深300收盘点位",
+      "raw": "4658.150",
+      "unit": "index",
+      "period": "2026-08-05",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-06",
+      "label": "沪深300收盘点位",
+      "raw": "4651.310",
+      "unit": "index",
+      "period": "2026-08-06",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-07",
+      "label": "沪深300收盘点位",
+      "raw": "4694.440",
+      "unit": "index",
+      "period": "2026-08-07",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-10",
+      "label": "沪深300收盘点位",
+      "raw": "4702.020",
+      "unit": "index",
+      "period": "2026-08-10",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-11",
+      "label": "沪深300收盘点位",
+      "raw": "4663.790",
+      "unit": "index",
+      "period": "2026-08-11",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-12",
+      "label": "沪深300收盘点位",
+      "raw": "4690.920",
+      "unit": "index",
+      "period": "2026-08-12",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-13",
+      "label": "沪深300收盘点位",
+      "raw": "4663.950",
+      "unit": "index",
+      "period": "2026-08-13",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-14",
+      "label": "沪深300收盘点位",
+      "raw": "4665.880",
+      "unit": "index",
+      "period": "2026-08-14",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-17",
+      "label": "沪深300收盘点位",
+      "raw": "4741.100",
+      "unit": "index",
+      "period": "2026-08-17",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-18",
+      "label": "沪深300收盘点位",
+      "raw": "4725.810",
+      "unit": "index",
+      "period": "2026-08-18",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-19",
+      "label": "沪深300收盘点位",
+      "raw": "4588.700",
+      "unit": "index",
+      "period": "2026-08-19",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-20",
+      "label": "沪深300收盘点位",
+      "raw": "4592.750",
+      "unit": "index",
+      "period": "2026-08-20",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-21",
+      "label": "沪深300收盘点位",
+      "raw": "4618.900",
+      "unit": "index",
+      "period": "2026-08-21",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-24",
+      "label": "沪深300收盘点位",
+      "raw": "4563.130",
+      "unit": "index",
+      "period": "2026-08-24",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-25",
+      "label": "沪深300收盘点位",
+      "raw": "4552.030",
+      "unit": "index",
+      "period": "2026-08-25",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-26",
+      "label": "沪深300收盘点位",
+      "raw": "4590.790",
+      "unit": "index",
+      "period": "2026-08-26",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-27",
+      "label": "沪深300收盘点位",
+      "raw": "4630.280",
+      "unit": "index",
+      "period": "2026-08-27",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-28",
+      "label": "沪深300收盘点位",
+      "raw": "4609.180",
+      "unit": "index",
+      "period": "2026-08-28",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-08-31",
+      "label": "沪深300收盘点位",
+      "raw": "4625.090",
+      "unit": "index",
+      "period": "2026-08-31",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-01",
+      "label": "沪深300收盘点位",
+      "raw": "4611.440",
+      "unit": "index",
+      "period": "2026-09-01",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-02",
+      "label": "沪深300收盘点位",
+      "raw": "4547.960",
+      "unit": "index",
+      "period": "2026-09-02",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-03",
+      "label": "沪深300收盘点位",
+      "raw": "4552.580",
+      "unit": "index",
+      "period": "2026-09-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-04",
+      "label": "沪深300收盘点位",
+      "raw": "4548.050",
+      "unit": "index",
+      "period": "2026-09-04",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-07",
+      "label": "沪深300收盘点位",
+      "raw": "4575.020",
+      "unit": "index",
+      "period": "2026-09-07",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-08",
+      "label": "沪深300收盘点位",
+      "raw": "4558.740",
+      "unit": "index",
+      "period": "2026-09-08",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-09",
+      "label": "沪深300收盘点位",
+      "raw": "4572.600",
+      "unit": "index",
+      "period": "2026-09-09",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-10",
+      "label": "沪深300收盘点位",
+      "raw": "4548.390",
+      "unit": "index",
+      "period": "2026-09-10",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-11",
+      "label": "沪深300收盘点位",
+      "raw": "4510.160",
+      "unit": "index",
+      "period": "2026-09-11",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-14",
+      "label": "沪深300收盘点位",
+      "raw": "4480.080",
+      "unit": "index",
+      "period": "2026-09-14",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-15",
+      "label": "沪深300收盘点位",
+      "raw": "4450.040",
+      "unit": "index",
+      "period": "2026-09-15",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-16",
+      "label": "沪深300收盘点位",
+      "raw": "4480.270",
+      "unit": "index",
+      "period": "2026-09-16",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-17",
+      "label": "沪深300收盘点位",
+      "raw": "4460.160",
+      "unit": "index",
+      "period": "2026-09-17",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-18",
+      "label": "沪深300收盘点位",
+      "raw": "4507.390",
+      "unit": "index",
+      "period": "2026-09-18",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-21",
+      "label": "沪深300收盘点位",
+      "raw": "4539.570",
+      "unit": "index",
+      "period": "2026-09-21",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-22",
+      "label": "沪深300收盘点位",
+      "raw": "4544.590",
+      "unit": "index",
+      "period": "2026-09-22",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-23",
+      "label": "沪深300收盘点位",
+      "raw": "4517.280",
+      "unit": "index",
+      "period": "2026-09-23",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-24",
+      "label": "沪深300收盘点位",
+      "raw": "4439.140",
+      "unit": "index",
+      "period": "2026-09-24",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-28",
+      "label": "沪深300收盘点位",
+      "raw": "4340.760",
+      "unit": "index",
+      "period": "2026-09-28",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-29",
+      "label": "沪深300收盘点位",
+      "raw": "4345.210",
+      "unit": "index",
+      "period": "2026-09-29",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-09-30",
+      "label": "沪深300收盘点位",
+      "raw": "4357.620",
+      "unit": "index",
+      "period": "2026-09-30",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-08",
+      "label": "沪深300收盘点位",
+      "raw": "4310.280",
+      "unit": "index",
+      "period": "2026-10-08",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-09",
+      "label": "沪深300收盘点位",
+      "raw": "4317.250",
+      "unit": "index",
+      "period": "2026-10-09",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-12",
+      "label": "沪深300收盘点位",
+      "raw": "4287.980",
+      "unit": "index",
+      "period": "2026-10-12",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-13",
+      "label": "沪深300收盘点位",
+      "raw": "4275.680",
+      "unit": "index",
+      "period": "2026-10-13",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-14",
+      "label": "沪深300收盘点位",
+      "raw": "4217.680",
+      "unit": "index",
+      "period": "2026-10-14",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-15",
+      "label": "沪深300收盘点位",
+      "raw": "4166.010",
+      "unit": "index",
+      "period": "2026-10-15",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-16",
+      "label": "沪深300收盘点位",
+      "raw": "4170.610",
+      "unit": "index",
+      "period": "2026-10-16",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-19",
+      "label": "沪深300收盘点位",
+      "raw": "4174.530",
+      "unit": "index",
+      "period": "2026-10-19",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-20",
+      "label": "沪深300收盘点位",
+      "raw": "4152.110",
+      "unit": "index",
+      "period": "2026-10-20",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-21",
+      "label": "沪深300收盘点位",
+      "raw": "4111.930",
+      "unit": "index",
+      "period": "2026-10-21",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-22",
+      "label": "沪深300收盘点位",
+      "raw": "4036.300",
+      "unit": "index",
+      "period": "2026-10-22",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-23",
+      "label": "沪深300收盘点位",
+      "raw": "4105.330",
+      "unit": "index",
+      "period": "2026-10-23",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-26",
+      "label": "沪深300收盘点位",
+      "raw": "4103.540",
+      "unit": "index",
+      "period": "2026-10-26",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-27",
+      "label": "沪深300收盘点位",
+      "raw": "4049.550",
+      "unit": "index",
+      "period": "2026-10-27",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-28",
+      "label": "沪深300收盘点位",
+      "raw": "4083.870",
+      "unit": "index",
+      "period": "2026-10-28",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-29",
+      "label": "沪深300收盘点位",
+      "raw": "4041.840",
+      "unit": "index",
+      "period": "2026-10-29",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-10-30",
+      "label": "沪深300收盘点位",
+      "raw": "3985.500",
+      "unit": "index",
+      "period": "2026-10-30",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-11-02",
+      "label": "沪深300收盘点位",
+      "raw": "4016.920",
+      "unit": "index",
+      "period": "2026-11-02",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-11-03",
+      "label": "沪深300收盘点位",
+      "raw": "4008.870",
+      "unit": "index",
+      "period": "2026-11-03",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh000300-close-2026-11-04",
+      "label": "沪深300收盘点位",
+      "raw": "4101.340",
+      "unit": "index",
+      "period": "2026-11-04",
+      "sourceId": "tencent_benchmark",
+      "page": 0,
+      "scope": "指数点位（day）"
+    },
+    {
+      "id": "sh600519-spot",
+      "label": "不复权收盘价格",
+      "raw": "1446.44",
+      "unit": "price",
+      "period": "20261104161448",
+      "sourceId": "tencent_quote",
+      "page": 0,
+      "scope": "腾讯快照字段3，人民币元/股"
+    },
+    {
+      "id": "sh600519-market-cap",
+      "label": "供应商总市值",
+      "raw": "1808168000000.00",
+      "unit": "CNY",
+      "period": "20261104161448",
+      "sourceId": "tencent_quote",
+      "page": 0,
+      "scope": "腾讯快照字段45，原值 18081.68 亿元；独立用股本×价格交叉核对主标的"
+    },
+    {
+      "id": "sz000568-spot",
+      "label": "不复权收盘价格",
+      "raw": "79.21",
+      "unit": "price",
+      "period": "20261104161448",
+      "sourceId": "tencent_quote",
+      "page": 0,
+      "scope": "腾讯快照字段3，人民币元/股"
+    },
+    {
+      "id": "sz000568-market-cap",
+      "label": "供应商总市值",
+      "raw": "116589000000.00",
+      "unit": "CNY",
+      "period": "20261104161448",
+      "sourceId": "tencent_quote",
+      "page": 0,
+      "scope": "腾讯快照字段45，原值 1165.89 亿元；独立用股本×价格交叉核对主标的"
+    },
+    {
+      "id": "sh600809-spot",
+      "label": "不复权收盘价格",
+      "raw": "129.00",
+      "unit": "price",
+      "period": "20261104161500",
+      "sourceId": "tencent_quote",
+      "page": 0,
+      "scope": "腾讯快照字段3，人民币元/股"
+    },
+    {
+      "id": "sh600809-market-cap",
+      "label": "供应商总市值",
+      "raw": "157375000000.00",
+      "unit": "CNY",
+      "period": "20261104161500",
+      "sourceId": "tencent_quote",
+      "page": 0,
+      "scope": "腾讯快照字段45，原值 1573.75 亿元；独立用股本×价格交叉核对主标的"
+    },
+    {
+      "id": "sz000858-spot",
+      "label": "不复权收盘价格",
+      "raw": "75.10",
+      "unit": "price",
+      "period": "20261104161445",
+      "sourceId": "tencent_quote",
+      "page": 0,
+      "scope": "腾讯快照字段3，人民币元/股"
+    },
+    {
+      "id": "sz000858-market-cap",
+      "label": "供应商总市值",
+      "raw": "291509000000.00",
+      "unit": "CNY",
+      "period": "20261104161445",
+      "sourceId": "tencent_quote",
+      "page": 0,
+      "scope": "腾讯快照字段45，原值 2915.09 亿元；独立用股本×价格交叉核对主标的"
+    },
+    {
+      "id": "20269M-equity",
+      "label": "归属于上市公司股东的所有者权益",
+      "raw": "271,204,740,541.63",
+      "unit": "CNY",
+      "period": "2026-09-30",
+      "sourceId": "moutai2026q3",
+      "page": 2,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "20269M-shares",
+      "label": "实收资本（股本）",
+      "raw": "1,250,081,601.00",
+      "unit": "shares",
+      "period": "2026-09-30",
+      "sourceId": "moutai2026q3",
+      "page": 7,
+      "scope": "报告期末股本，非自动认定为当前股本"
+    },
+    {
+      "id": "wly2025q3original-revenue",
+      "label": "营业收入",
+      "raw": "60,945,321,083.57",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "wly2025q3original",
+      "page": 1,
+      "scope": "五粮液合并；归母净利润按归属列示"
+    },
+    {
+      "id": "wly2025q3original-profit",
+      "label": "归母净利润",
+      "raw": "21,511,276,550.29",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "wly2025q3original",
+      "page": 1,
+      "scope": "五粮液合并；归母净利润按归属列示"
+    },
+    {
+      "id": "wly2025q3original-ocf",
+      "label": "经营现金流量净额",
+      "raw": "28,247,488,416.94",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "wly2025q3original",
+      "page": 1,
+      "scope": "五粮液合并；归母净利润按归属列示"
+    },
+    {
+      "id": "wly2025q3updated-revenue",
+      "label": "营业收入",
+      "raw": "30,637,727,654.97",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "wly2025q3updated",
+      "page": 1,
+      "scope": "五粮液合并；归母净利润按归属列示"
+    },
+    {
+      "id": "wly2025q3updated-profit",
+      "label": "归母净利润",
+      "raw": "6,474,551,792.18",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "wly2025q3updated",
+      "page": 1,
+      "scope": "五粮液合并；归母净利润按归属列示"
+    },
+    {
+      "id": "wly2025q3updated-ocf",
+      "label": "经营现金流量净额",
+      "raw": "28,247,488,416.94",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "wly2025q3updated",
+      "page": 1,
+      "scope": "五粮液合并；归母净利润按归属列示"
+    }
+  ],
+  "versions": [
+    {
+      "id": "wly2025q3original",
+      "published": "2025-10-31",
+      "title": "五粮液 2025 年第三季度报告（原始版）",
+      "supersedes": null,
+      "inputs": [
+        "wly2025q3original-revenue",
+        "wly2025q3original-profit",
+        "wly2025q3original-ocf"
+      ]
+    },
+    {
+      "id": "wly2025q3updated",
+      "published": "2026-04-30",
+      "title": "五粮液 2025 年第三季度报告（更新后）",
+      "supersedes": "wly2025q3original",
+      "inputs": [
+        "wly2025q3updated-revenue",
+        "wly2025q3updated-profit",
+        "wly2025q3updated-ocf"
+      ]
+    }
+  ]
+}

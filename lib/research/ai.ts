@@ -1,14 +1,15 @@
 import { metrics, notes, format, routeQuestion, selectClaims, snapshot, validateClaimsEvidence } from './engine.ts';
 import type { AIResult } from './types.ts';
 export const PROMPT_VERSION='evidence-json-v1';
-export function validateModelResult(input:unknown): {text:string;evidenceIds:string[]}[] {
+export function validateModelResult(input:unknown,allowedIds?:Set<string>): {text:string;evidenceIds:string[]}[] {
  if(!input || typeof input!=='object'||!('claims' in input)||!Array.isArray(input.claims)||input.claims.length<1||input.claims.length>6)throw new Error('模型结构不符合契约');
  const claims=input.claims.map((c:unknown)=>{
   if(!c||typeof c!=='object'||!('text'in c)||typeof c.text!=='string'||c.text.length>700||!('evidenceIds'in c)||!Array.isArray(c.evidenceIds)||c.evidenceIds.some(id=>typeof id!=='string'))throw new Error('结论字段无效');
   const evidenceIds=c.evidenceIds as string[];
-  const text=c.text.replace(/\{\{([^}]+)\}\}/g,(_,id:string)=>{const m=metrics.find(m=>m.id===id);if(!m||m.value===null||!evidenceIds.includes(id))throw new Error('数字占位符没有对应证据');return `〔${id}〕`;});
-  if(/[0-9０-９%％]/.test(text.replace(/〔[^〕]+〕/g,'')))throw new Error('模型自由生成了数字');
-  return {text:c.text,evidenceIds:c.evidenceIds as string[]};
+  const text=c.text.replace(/\{\{([^}]+)\}\}/g,(_,id:string)=>{const m=metrics.find(m=>m.id===id);if(!m||m.value===null||!evidenceIds.includes(id))throw new Error('数字占位符没有对应证据');return "";});
+  if(/[0-9０-９%％]/.test(text))throw new Error('模型自由生成了数字');
+  if(allowedIds&&evidenceIds.some(id=>!allowedIds.has(id)))throw new Error('证据不属于当前任务证据包');
+  return {text:c.text,evidenceIds};
  });
  if(validateClaimsEvidence(claims).length)throw new Error('证据引用或结论边界校验失败');
  return claims.map(c=>({...c,text:c.text.replace(/\{\{([^}]+)\}\}/g,(_,id:string)=>{const m=metrics.find(m=>m.id===id)!;return format(m.value,m.unit)+(m.unit==='CNY'?' 亿元':m.unit==='times'?' 倍':'');})}));
@@ -24,7 +25,7 @@ export async function interpret(question:string,challenge:boolean,config:{key?:s
   if(!response.ok)throw new Error('模型服务暂不可用');
   const data=await response.json() as {choices?:{message?:{content?:string}}[]};
   const content=data.choices?.[0]?.message?.content;if(!content)throw new Error('模型没有返回有效结果');
-  const result=validateModelResult(JSON.parse(content));
+  const result=validateModelResult(JSON.parse(content),ids);
   return {status:'verified',summary:'',claims:result,message:'AI 输出已通过结构、引用及数字契约检查；语义仍需沿证据核验。'};
  }catch{return {status:'failed',summary:'',claims:[],message:'AI 解读失败或未通过证据校验。保留已核验事实，可重试；没有用生成内容填补缺失数据。'};}
 }

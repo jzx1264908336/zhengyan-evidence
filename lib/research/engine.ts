@@ -1,10 +1,15 @@
 import raw from './snapshot.json' with { type: 'json' };
+import supplement from './supplement.json' with {type:'json'};
+import {marketData,marketWindow} from './market-analysis.ts';
 import type { Observation, Source, FilingNote, Claim, Metric, ResearchTask } from './types.ts';
 
-export const snapshot = raw as typeof raw & { observations:Observation[]; sources:Source[]; notes:FilingNote[] };
-export const observations = raw.observations as Observation[];
+export const snapshot = {...raw,version:'research-20261104-v2'};
+export const observations = [...raw.observations,...supplement.observations] as Observation[];
 export const notes = raw.notes as FilingNote[];
-export const sources = raw.sources as Source[];
+export const sources = [...raw.sources,...supplement.sources] as Source[];
+export const filingObservationCount=observations.filter(o=>sources.find(s=>s.id===o.sourceId)?.kind!=='market').length;
+export {marketData,marketWindow};
+export const revisionVersions=supplement.versions;
 export const dimensions = ['经营质量','财务趋势','估值','行情特征','行业位置','重要事件','风险'];
 export const obs = (id:string) => observations.find(o=>o.id===id);
 
@@ -18,6 +23,7 @@ export function parseCents(value:string|null):bigint|null {
 export function numeric(o:Observation|undefined):number|null {
   if(!o) return null;
   if(o.unit==='percent')return Number(o.raw.replaceAll(',',''))/100;
+  if(o.unit==='price'||o.unit==='index')return /^\d+(\.\d+)?$/.test(o.raw)?Number(o.raw):null;
   const cents=parseCents(o.raw);return cents===null?null:Number(cents)/100;
 }
 export const value=(id:string)=>numeric(obs(id));
@@ -49,18 +55,31 @@ export function buildMetrics():Metric[] {
  const a=value('20269M-bank'),b=value('20259M-bank');
  result.push({id:'bank-delta',label:'同业存放现金流出项目同比变化',value:a===null||b===null?null:a-b,unit:'CNY',formula:'本期现金流出项目 − 上期现金流出项目；负数表示流出减少',inputs:['20269M-bank','20259M-bank']});
  for(const code of ['000568.SZ','600809.SH','000858.SZ'])for(const [field,suffix] of [['revenue','revenue'],['parentProfit','profit']])growth(code+'-'+suffix+'-yoy','2025 同比',code+'-2025-'+field,code+'-2024-'+field);
+ const cap='sh600519-market-cap';
+ const profitInputs=['2025-parentProfit','20269M-parentProfit','20259M-parentProfit'];
+ result.push({id:'market-pe-ttm',label:'市盈率 PE TTM',value:ratio(value(cap),ttm(...profitInputs.map(value) as [number|null,number|null,number|null])),unit:'times',formula:'2026-11-04 供应商总市值 ÷（2025 归母净利 + 2026 前三季度归母净利 − 2025 前三季度归母净利）',inputs:[cap,...profitInputs]});
+ result.push({id:'market-pb',label:'市净率 PB（最近报告权益）',value:ratio(value(cap),value('20269M-equity')),unit:'times',formula:'2026-11-04 供应商总市值 ÷ 2026-09-30 归母所有者权益；分子分母时点不同，明确披露滞后',inputs:[cap,'20269M-equity']});
+ for(const [symbol,prefix] of [['sh600519',''],['sz000568','000568.SZ-'],['sh600809','600809.SH-'],['sz000858','000858.SZ-']])result.push({id:symbol+'-pe-fy2025',label:'2025 年静态市盈率（非 TTM）',value:ratio(value(symbol+'-market-cap'),value(prefix+'2025-parentProfit')),unit:'times',formula:'2026-11-04 供应商总市值 ÷ 2025 年归母净利润；不是滚动或预测市盈率',inputs:[symbol+'-market-cap',prefix+'2025-parentProfit']});
+ for(const count of [20,60,244]){const w=marketWindow(count);for(const [symbol,stats,label] of [['sh600519',w.stockStats,'贵州茅台'],['sh000300',w.benchmarkStats,'沪深300']] as const){result.push({id:`${symbol}-return-${count}`,label:label+' 最近 '+count+' 个共同交易日区间价格表现',value:stats.returnValue,unit:'percent',formula:'区间终点收盘值 ÷ 起点收盘值 − 1；个股使用供应商前复权价格，指数使用点位，不宣称现金分红再投资总回报',inputs:[symbol+'-close-'+stats.start.date,symbol+'-close-'+stats.end.date]});result.push({id:`${symbol}-drawdown-${count}`,label:label+' 区间最大回撤',value:stats.drawdown,unit:'percent',formula:'逐点扫描历史峰值，取 min(价格 ÷ 截至当日峰值 − 1)；下面列出最差峰谷对',inputs:[symbol+'-close-'+stats.peak.date,symbol+'-close-'+stats.trough.date]})}}
+ for(const version of supplement.versions)result.push({id:version.id+'-margin',label:'五粮液 2025 前三季度归母净利润 / 收入',value:ratio(value(version.id+'-profit'),value(version.id+'-revenue')),unit:'percent',formula:'同一版本的归母净利润 ÷ 同一版本营业收入；只是归母口径比值，不替代合并销售净利率',inputs:[version.id+'-profit',version.id+'-revenue']});
  return result;
 }
 export const metrics=buildMetrics();
 export const metric=(id:string)=>metrics.find(m=>m.id===id);
 
 export function routeQuestion(question:string):ResearchTask {
- if(/银行|保险|券商|宁德|比亚迪|腾讯|五粮液.*诊断|茅台以外/.test(question))return {intent:'scope',dimensions:[],explanation:'首版仅支持贵州茅台深度诊断。同行用于比较，不支持独立诊断；金融公司需要专门指标体系。',restricted:true};
+ if(/(?:分析|诊断|研究)(?:一下)?(?:银行|保险公司|券商|宁德|比亚迪|腾讯控股)|招商银行|平安银行|茅台以外|五粮液.*诊断/.test(question))return {intent:'scope',dimensions:[],explanation:'首版仅支持贵州茅台深度诊断。同行用于比较，不支持独立诊断；金融公司需要专门指标体系。',restricted:true};
  if(/买入|卖出|满仓|涨停|明天.*涨|目标价|收益保证/.test(question))return {intent:'boundary',dimensions:['风险'],explanation:'产品提供证据研究，不生成直接交易指令、确定性涨跌预测或收益承诺。可继续核验经营与估值证据。',restricted:true};
- if(/现金|回款|利润|经营/.test(question))return {intent:'cash',dimensions:['经营质量','财务趋势','风险'],explanation:'关注利润与现金流的一致性；本公司合并财务公司，优先核验现金流口径及其变动解释。',restricted:false};
- if(/估值|便宜|贵|同行|行业|市盈率|PE/i.test(question))return {intent:'peers',dimensions:['估值','行业位置','财务趋势'],explanation:'先比较同年度经营数据，再检查估值输入。没有同一时点市值和可比估值，不能判断是否低估。',restricted:false};
- if(/事件|公告|行情|股价|走势|市场/.test(question))return {intent:'event',dimensions:['重要事件','行情特征','风险'],explanation:'以披露时间梳理变化；行情未接通时只展示信息边界，不能将事件与股价作因果关联。',restricted:false};
- return {intent:'overview',dimensions:['经营质量','财务趋势','行业位置','风险'],explanation:'按综合研究处理，优先检查经营、趋势、同行和风险。可进一步限定为现金流、估值或事件问题。',restricted:false};
+ const cash=/现金|回款|利润|经营|收入|银行存款/.test(question);
+ const valuation=/估值|便宜|昂贵|贵不贵|贵吗|同行|行业|市盈率|\bPE\b/i.test(question);
+ const event=/事件|公告|行情|股价|走势|市场|更正|修订|更新/.test(question);
+ const selected=[cash,valuation,event].filter(Boolean).length;
+ const ds=[...(cash?['经营质量','财务趋势']:[]),...(valuation?['估值','行业位置','财务趋势']:[]),...(event?['重要事件','行情特征']:[]),'风险'];
+ if(selected>1)return {intent:'overview',dimensions:[...new Set(ds)],explanation:'问题涉及多个方面，合并对应研究维度。市场数据为同日公开快照，财务使用已披露期次；不把相关关系认定为因果。',restricted:false};
+ if(cash)return {intent:'cash',dimensions:['经营质量','财务趋势','风险'],explanation:'检查利润与现金流一致性，并核验财务公司对合并口径的影响。当前主要对比 2026 前三季度和上年同期。',restricted:false};
+ if(valuation)return {intent:'peers',dimensions:['估值','行业位置','财务趋势','风险'],explanation:'分别计算 TTM 与同年度静态市盈率，检查业务、收入确认与样本代表性；倍数不能单独证明低估。',restricted:false};
+ if(event)return {intent:'event',dimensions:['重要事件','行情特征','风险'],explanation:'先核验披露与数据版本，再看共同交易日的价格表现；日期对齐与相关性均不能证明事件因果。',restricted:false};
+ return {intent:'overview',dimensions:['经营质量','财务趋势','行业位置','风险'],explanation:'按综合研究处理，优先检查经营、趋势、同行和风险。可限定现金流、估值或事件问题。',restricted:false};
 }
 
 export function buildClaims():Claim[] {
@@ -72,9 +91,9 @@ export function buildClaims():Claim[] {
  {id:'C-coverage',title:'合并经营现金流高于合并净利润',body:`本期合并经营现金流 / 合并净利润为 ${format(metric('20269M-cash-ratio')?.value??null,'times')} 倍。合并范围一致，分母包含少数股东损益。`,stance:'positive',kind:'事实',dimension:'经营质量',metrics:['20269M-cash-ratio'],notes:['N-cash'],limitation:'该比值是合并报表事实，不足以证明酒类主业盈利质量改善；财务公司使跨行业比较受限。',next:'分拆财务公司影响，再检查主业现金回收与利润的关系。'},
  {id:'C-annual',title:'年度与最新累计期，应放在各自口径下阅读',body:`2025 年收入同比 ${p('2025-revenue-yoy')}、经营现金流同比 ${p('2025-ocf-yoy')}；2026 前三季度现金流恢复不代表全年走势已经确定。`,stance:'negative',kind:'分析推断',dimension:'财务趋势',metrics:['2025-revenue-yoy','2025-ocf-yoy','9M-ocf-yoy'],notes:['N-annual','N-audit'],limitation:'年度与九个月金额不直接比较规模；2026 三季报未经审计，不能替代全年结果。',next:'跟踪第四季度现金流与全年审计披露，验证本次改善是否持续。'},
  {id:'C-channel',title:'渠道收入可追溯，终端动销仍是信息缺口',body:'报告披露了直销、批发代理与 i 茅台收入，但这些材料不能直接回答终端库存、真实开瓶或消费者购买的变化。',stance:'unknown',kind:'未验证',dimension:'重要事件',metrics:[],notes:['N-channel'],limitation:'缺少可验证的终端库存与动销数据。不将渠道收入变化推断为终端需求同幅变化。',next:'寻找口径明确、可以核验的终端动销与渠道库存资料，记录时点和覆盖范围。'},
- {id:'C-value',title:'估值结论暂缓：缺少同一时点的市场数据',body:'当前快照没有已核验的股价、市值及同行估值数据。财务表现和品牌认知无法单独证明股票便宜或昂贵。',stance:'unknown',kind:'未验证',dimension:'估值',metrics:['ttm-parentProfit'],notes:[],limitation:'尚未配置扶摇/iFinD；禁止把历史或用户假设价格当作当前市场价格。',next:'连接指定金融数据服务，取得同一时点市值、股本与同行估值口径，再开展估值比较。'},
+ {id:'C-value',title:'估值倍数可以计算，合理性仍不能直接下结论',body:`基于同日公开市值与已披露财务数据，PE TTM 为 ${format(metric('market-pe-ttm')?.value??null,'times')} 倍，PB 为 ${format(metric('market-pb')?.value??null,'times')} 倍。倍数本身不证明低估或高估。`,stance:'unknown',kind:'分析推断',dimension:'估值',metrics:['market-pe-ttm','market-pb'],notes:[],limitation:'行情为腾讯公开快照，非扶摇实时接入；PB 使用最近披露权益，具有报告期滞后。同行仅比较统一年度静态倍数，不混用 TTM。',next:'核验业务增长、风险和同行可比性；接入指定数据服务交叉验证市值及口径。'},
  {id:'C-peer',title:'同行样本存在收入确认差异，不能机械排名',body:'已核验三家白酒同行的年度数据。五粮液披露收入确认核算调整，默认从同比中位数中排除；其余样本不足三家，不生成同行分位。',stance:'conflict',kind:'分析推断',dimension:'行业位置',metrics:['000858.SZ-revenue-yoy'],notes:['N-wly'],limitation:'香型、价格带和财务公司业务不同，小样本不能代表全行业；仅比较 2025 年年度数据。',next:'扩充口径一致的同行，并检查收入确认变化对跨期比较的影响。'},
- {id:'C-price',title:'行情与事件影响尚未验证',body:'尚未接入可信复权日线和基准序列，因此不输出区间收益、回撤或公告引发涨跌的结论。',stance:'unknown',kind:'未验证',dimension:'行情特征',metrics:[],notes:[],limitation:'公告披露可以核验，事件与市场表现的关系需要额外行情证据；相关性也不能证明因果。',next:'取得复权日线、交易日历与基准，按公告实际披露时间对齐区间。'},
+ {id:'C-price',title:'区间表现可复核，事件因果关系仍未证实',body:`最近 20 个共同交易日，个股前复权价格表现为 ${p('sh600519-return-20')}，沪深300 点位变化为 ${p('sh000300-return-20')}。使用对齐日期，避免错配区间。`,stance:'unknown',kind:'分析推断',dimension:'行情特征',metrics:['sh600519-return-20','sh000300-return-20','sh600519-drawdown-20'],notes:[],limitation:'公开供应商前复权价格的收益口径不等于分红再投资总回报；没有因果识别，不能说公告造成上涨或下跌。',next:'查看公告前后的明确交易区间，核验其他同期信息和基准变化，保留因果不确定性。'},
  ];
 }
 export const claims=buildClaims();

@@ -2,6 +2,8 @@
 
 更新：2026-11-05。当前是可公开操作的财报核验版本，不是声称全部要求完成的最终答卷。
 
+最新增量：已完成 Ollama + Qwen3.5 9B 本地真实解读、网页调用及引用钻取，85 项自动测试通过；20 题契约校验通过，但语义仍有部分不充分回答。详见 [本地模型验收](local-model-verification.md)。线上仍是原 V2，不包含本机模型服务。
+
 公开源码仓库：https://github.com/jzx1264908336/zhengyan-evidence 。仓库与在线产品分开发布；本次仅补充交付链接，应用功能仍为 V2。
 
 后续 OpenAI 接入：本地配置与模型列表查询成功，默认 Responses 适配已完成，自动测试增至 76 项；真实生成因 `credit_balance_exhausted` 失败，20 问题语义验收和线上配置未完成。详见 [OpenAI 验收状态](openai-verification.md)。线上应用仍为原 V2，仓库包含后续接口改造。

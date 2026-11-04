@@ -1,5 +1,7 @@
 # AI 使用与验证记录
 
+最新本地推理增量见 [本地模型验收](local-model-verification.md) 和 [真实20题结果](local-model-results.json)。已实际使用 Qwen3.5 9B，不把 OpenAI 额度失败、mock 契约或规则输出当作其真实生成结果。逐条语义检查仍发现部分不充分回答，已在报告中保留。
+
 ## 实际使用
 
 使用 Codex 进行需求拆解、公开来源检索、数据核验脚本、TypeScript 计算/规则、React 页面、接口、自动化测试和文档编写；使用 Sites 技能进行脚手架与托管准备，PDF 技能工作流进行报告提取与选页渲染核验。

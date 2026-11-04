@@ -61,6 +61,9 @@ export default defineConfig(async ({ command }) => {
         inspectorPort: false,
         config: {
           ...localBindingConfig,
+          ...(command==='serve'&&process.env.MODEL_PROVIDER==='ollama'?{
+            vars:{MODEL_PROVIDER:'ollama',MODEL_ENDPOINT:'http://127.0.0.1:11434/api/chat',MODEL_NAME:'qwen3.5:9b'},
+          }:{}),
           ...(command === "serve"
             ? {
                 services: [

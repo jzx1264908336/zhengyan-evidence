@@ -1,7 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {interpret,DEFAULT_MODEL_ENDPOINT,DEFAULT_MODEL_NAME,configFromEnvironment,prioritizeLocalClaims,normalizeLocalNumbers} from '../lib/research/ai.ts';
-import {claims} from '../lib/research/engine.ts';
+import {interpret,DEFAULT_MODEL_ENDPOINT,DEFAULT_MODEL_NAME,configFromEnvironment,normalizeLocalNumbers} from '../lib/research/ai.ts';
 const valid={claims:[{text:'现金流同比{{9M-ocf-yoy}}，不能直接推出酒类主业改善。',evidenceIds:['9M-ocf-yoy','N-cash']}]};
 const completed=(content:unknown=valid)=>({status:'completed',output:[{type:'reasoning'},{type:'message',content:[{type:'output_text',text:JSON.stringify(content)}]}]});
 test('OpenAI Responses uses strict schema, task evidence enum, output budget and no storage',async()=>{
@@ -26,7 +25,7 @@ test('Network failure and malformed JSON do not emit fabricated claims',async()=
  for(const mock of [(async()=>{throw new Error('network')}) as typeof fetch,(async()=>new Response('not-json')) as typeof fetch]){const result=await interpret('现金流',false,{key:'test'},mock);assert.equal(result.status,'failed');assert.deepEqual(result.claims,[])}
 });
 test('Ollama local inference needs no key and never forwards a supplied cloud key',async()=>{
- const mock=(async(url,init)=>{assert.equal(url,'http://127.0.0.1:11434/api/chat');assert.equal(new Headers(init?.headers).has('Authorization'),false);const body=JSON.parse(String(init?.body));assert.equal(body.think,false);assert.equal(body.stream,false);assert.equal(body.model,'qwen3.5:9b');assert.equal(body.format.additionalProperties,false);return Response.json({done:true,done_reason:'stop',message:{content:JSON.stringify(valid)}})}) as typeof fetch;
+ const mock=(async(url,init)=>{assert.equal(url,'http://127.0.0.1:11434/api/chat');assert.equal(new Headers(init?.headers).has('Authorization'),false);const body=JSON.parse(String(init?.body));assert.equal(body.think,false);assert.equal(body.stream,false);assert.equal(body.model,'qwen3.5:9b');assert.equal(body.format.additionalProperties,false);return Response.json({done:true,done_reason:'stop',message:{content:JSON.stringify({cash:'现金流增长不能直接证明酒类主业改善，仍需拆分财务公司影响。'})}})}) as typeof fetch;
  for(const key of [undefined,'real-cloud-key-must-not-leak']){const result=await interpret('现金流',false,{provider:'ollama',key},mock);assert.equal(result.status,'verified');assert.ok(result.message.includes('本地 Ollama'))}
 });
 test('Ollama rejects non-loopback addresses, other ports and redirects',async()=>{
@@ -41,9 +40,7 @@ test('Local mode ignores stale cloud endpoint, model name and credentials',()=>{
  const config=configFromEnvironment({MODEL_PROVIDER:'ollama',MODEL_ENDPOINT:'https://api.openai.com/v1/responses',MODEL_NAME:'cloud-model',MODEL_API_KEY:'secret'});
  assert.deepEqual(config,{provider:'ollama',endpoint:'http://127.0.0.1:11434/api/chat',model:'qwen3.5:9b'});
 });
-test('Local evidence prioritization covers the question rather than input order',()=>{
- for(const [question,id] of [['估值合理吗','C-value'],['五粮液比较','C-peer'],['年度趋势','C-annual'],['行情最大回撤','C-price'],['合并现金流和归母净利润','C-coverage'],['支持与反对','C-coverage']])assert.equal(prioritizeLocalClaims(question,claims)[0].id,id);
-});
+
 test('Provider redirects fail without following or releasing model output',async()=>{
  let calls=0;const mock=(async(_url,init)=>{calls++;assert.equal(init?.redirect,'manual');return new Response(null,{status:302,headers:{location:'http://untrusted.test'}})}) as typeof fetch;
  assert.equal((await interpret('现金流',false,{provider:'ollama'},mock)).status,'failed');assert.equal(calls,1);
@@ -51,11 +48,15 @@ test('Provider redirects fail without following or releasing model output',async
 test('Local prose rejects Chinese decimal bypass and malformed benchmark naming',async()=>{
  for(const text of ['比值为一点二六倍','表现优于沪深 三十指数']){const mock=(async()=>Response.json({done:true,done_reason:'stop',message:{content:JSON.stringify({claims:[{text,evidenceIds:['N-cash']}]})}})) as typeof fetch;assert.equal((await interpret('现金流',false,{provider:'ollama'},mock)).status,'failed')}
 });
-test('Composite question retains operating, valuation and price evidence',()=>{
- assert.deepEqual(prioritizeLocalClaims('综合经营、估值和行情，哪些有证据',claims).map(c=>c.id),['C-cash','C-value','C-price']);
-});
+
 test('Chinese ratio is recoverable only when matching a cited computed metric',()=>{
  assert.deepEqual(normalizeLocalNumbers({claims:[{text:'比值为一点二六倍',evidenceIds:['20269M-cash-ratio']}]}),{claims:[{text:'比值为{{20269M-cash-ratio}}',evidenceIds:['20269M-cash-ratio']}]});
  assert.throws(()=>normalizeLocalNumbers({claims:[{text:'比值为一点九九倍',evidenceIds:['20269M-cash-ratio']}]}));
  assert.throws(()=>normalizeLocalNumbers({claims:[{text:'比值为一点二六倍',evidenceIds:['N-cash']}]}));
+});
+test('Local validation may repair once, but cannot silently fall back to rules',async()=>{
+ let calls=0;const mock=(async()=>{calls++;return Response.json({done:true,done_reason:'stop',message:{content:JSON.stringify(calls===1?{cash:'增长999%'}:{cash:'现金流增长不能证明主业改善，需保留财务公司影响。'})}})}) as typeof fetch;
+ const result=await interpret('现金流',false,{provider:'ollama'},mock);assert.equal(result.status,'verified');assert.equal(calls,2);assert.ok(result.message.includes('一次校验修正'));
+ let invalidCalls=0;const invalid=(async()=>{invalidCalls++;return Response.json({done:true,message:{content:'{}'}})}) as typeof fetch;
+ const failed=await interpret('现金流',false,{provider:'ollama'},invalid);assert.equal(invalidCalls,2);assert.equal(failed.status,'failed');assert.deepEqual(failed.claims,[]);
 });

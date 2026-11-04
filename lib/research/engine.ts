@@ -61,7 +61,11 @@ export function buildMetrics():Metric[] {
  result.push({id:'market-pb',label:'市净率 PB（最近报告权益）',value:ratio(value(cap),value('20269M-equity')),unit:'times',formula:'2026-11-04 供应商总市值 ÷ 2026-09-30 归母所有者权益；分子分母时点不同，明确披露滞后',inputs:[cap,'20269M-equity']});
  for(const [symbol,prefix] of [['sh600519',''],['sz000568','000568.SZ-'],['sh600809','600809.SH-'],['sz000858','000858.SZ-']])result.push({id:symbol+'-pe-fy2025',label:'2025 年静态市盈率（非 TTM）',value:ratio(value(symbol+'-market-cap'),value(prefix+'2025-parentProfit')),unit:'times',formula:'2026-11-04 供应商总市值 ÷ 2025 年归母净利润；不是滚动或预测市盈率',inputs:[symbol+'-market-cap',prefix+'2025-parentProfit']});
  for(const count of [20,60,244]){const w=marketWindow(count);for(const [symbol,stats,label] of [['sh600519',w.stockStats,'贵州茅台'],['sh000300',w.benchmarkStats,'沪深300']] as const){result.push({id:`${symbol}-return-${count}`,label:label+' 最近 '+count+' 个共同交易日区间价格表现',value:stats.returnValue,unit:'percent',formula:'区间终点收盘值 ÷ 起点收盘值 − 1；个股使用供应商前复权价格，指数使用点位，不宣称现金分红再投资总回报',inputs:[symbol+'-close-'+stats.start.date,symbol+'-close-'+stats.end.date]});result.push({id:`${symbol}-drawdown-${count}`,label:label+' 区间最大回撤',value:stats.drawdown,unit:'percent',formula:'逐点扫描历史峰值，取 min(价格 ÷ 截至当日峰值 − 1)；下面列出最差峰谷对',inputs:[symbol+'-close-'+stats.peak.date,symbol+'-close-'+stats.trough.date]})}}
- for(const version of supplement.versions)result.push({id:version.id+'-margin',label:'五粮液 2025 前三季度归母净利润 / 收入',value:ratio(value(version.id+'-profit'),value(version.id+'-revenue')),unit:'percent',formula:'同一版本的归母净利润 ÷ 同一版本营业收入；只是归母口径比值，不替代合并销售净利率',inputs:[version.id+'-profit',version.id+'-revenue']});
+ for(const version of supplement.versions){
+  const versionLabel=version.supersedes?'更新版':'原始版';
+  result.push({id:version.id+'-margin',label:'五粮液 2025 前三季度'+versionLabel+'归母净利润 / 收入',value:ratio(value(version.id+'-profit'),value(version.id+'-revenue')),unit:'percent',formula:'同一版本的归母净利润 ÷ 同一版本营业收入；只是归母口径比值，不替代合并销售净利率',inputs:[version.id+'-profit',version.id+'-revenue']});
+  for(const [field,label] of [['revenue','营业收入'],['profit','归母净利润'],['ocf','经营现金流']]){const input=version.id+'-'+field;result.push({id:input+'-value',label:'五粮液 2025 前三季度'+versionLabel+label,value:value(input),unit:'CNY',formula:'同一报告版本的合并报表原始字段；不跨版本混用',inputs:[input]})}
+ }
  return result;
 }
 export const metrics=buildMetrics();

@@ -1,0 +1,317 @@
+{
+  "fetchedAt": "2026-11-04T22:28:21.791Z",
+  "snapshot": "research-20261104-v2",
+  "company": "600519.SH",
+  "status": "verified",
+  "checks": [
+    {
+      "endpoint": "/api/a-share/financials/income-statements?thscode=600519.SH&period=annual&limit=3",
+      "status": "ok",
+      "requestId": "d670275b44604f18bbca5c60865ca243",
+      "message": "真实 REST 查询已返回；仅比对所列字段",
+      "comparisons": [
+        {
+          "id": "2023-revenue",
+          "label": "营业收入",
+          "period": "2023-12-31",
+          "field": "operating_income",
+          "sourceId": "moutai2025",
+          "page": 6,
+          "filingValue": 147693604994.14,
+          "providerValue": 147693604994.14,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2023-parentProfit",
+          "label": "归母净利润",
+          "period": "2023-12-31",
+          "field": "parent_holder_net_profit",
+          "sourceId": "moutai2025",
+          "page": 6,
+          "filingValue": 74734071550.75,
+          "providerValue": 74734071550.75,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2024-revenue",
+          "label": "营业收入",
+          "period": "2024-12-31",
+          "field": "operating_income",
+          "sourceId": "moutai2025",
+          "page": 6,
+          "filingValue": 170899152276.34,
+          "providerValue": 170899152276.34,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2024-cost",
+          "label": "营业成本",
+          "period": "2024-12-31",
+          "field": "operating_costs",
+          "sourceId": "moutai2025",
+          "page": 61,
+          "filingValue": 13789482367.98,
+          "providerValue": 13789482367.98,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2024-totalProfit",
+          "label": "合并净利润",
+          "period": "2024-12-31",
+          "field": "net_profit",
+          "sourceId": "moutai2025",
+          "page": 62,
+          "filingValue": 89334728025.9,
+          "providerValue": 89334728025.9,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2024-parentProfit",
+          "label": "归母净利润",
+          "period": "2024-12-31",
+          "field": "parent_holder_net_profit",
+          "sourceId": "moutai2025",
+          "page": 6,
+          "filingValue": 86228146421.62,
+          "providerValue": 86228146421.62,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2025-revenue",
+          "label": "营业收入",
+          "period": "2025-12-31",
+          "field": "operating_income",
+          "sourceId": "moutai2025",
+          "page": 6,
+          "filingValue": 168838102514.79,
+          "providerValue": 168838102514.79,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2025-cost",
+          "label": "营业成本",
+          "period": "2025-12-31",
+          "field": "operating_costs",
+          "sourceId": "moutai2025",
+          "page": 61,
+          "filingValue": 14892277570.91,
+          "providerValue": 14892277570.91,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2025-totalProfit",
+          "label": "合并净利润",
+          "period": "2025-12-31",
+          "field": "net_profit",
+          "sourceId": "moutai2025",
+          "page": 62,
+          "filingValue": 85310324833.67,
+          "providerValue": 85310324833.67,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2025-parentProfit",
+          "label": "归母净利润",
+          "period": "2025-12-31",
+          "field": "parent_holder_net_profit",
+          "sourceId": "moutai2025",
+          "page": 6,
+          "filingValue": 82320067101.68,
+          "providerValue": 82320067101.68,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api/a-share/financials/income-statements?thscode=600519.SH&period=quarterly&limit=8",
+      "status": "ok",
+      "requestId": "ef0055b205814a97b2023f4e8299e7df",
+      "message": "真实 REST 查询已返回；仅比对所列字段",
+      "comparisons": [
+        {
+          "id": "20259M-revenue",
+          "label": "营业收入",
+          "period": "2025-09-30",
+          "field": "operating_income",
+          "sourceId": "moutai2026q3",
+          "page": 8,
+          "filingValue": 128453707655.86,
+          "providerValue": 128453707655.86,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "20259M-cost",
+          "label": "营业成本",
+          "period": "2025-09-30",
+          "field": "operating_costs",
+          "sourceId": "moutai2026q3",
+          "page": 8,
+          "filingValue": 11183972073.77,
+          "providerValue": 11183972073.77,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "20259M-totalProfit",
+          "label": "合并净利润",
+          "period": "2025-09-30",
+          "field": "net_profit",
+          "sourceId": "moutai2026q3",
+          "page": 9,
+          "filingValue": 66898804746.17,
+          "providerValue": 66898804746.17,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "20259M-parentProfit",
+          "label": "归母净利润",
+          "period": "2025-09-30",
+          "field": "parent_holder_net_profit",
+          "sourceId": "moutai2026q3",
+          "page": 9,
+          "filingValue": 64626746712.18,
+          "providerValue": 64626746712.18,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "20269M-revenue",
+          "label": "营业收入",
+          "period": "2026-09-30",
+          "field": "operating_income",
+          "sourceId": "moutai2026q3",
+          "page": 8,
+          "filingValue": 130970743649.04,
+          "providerValue": 130970743649.04,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "20269M-cost",
+          "label": "营业成本",
+          "period": "2026-09-30",
+          "field": "operating_costs",
+          "sourceId": "moutai2026q3",
+          "page": 8,
+          "filingValue": 13645718932.9,
+          "providerValue": 13645718932.9,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "20269M-totalProfit",
+          "label": "合并净利润",
+          "period": "2026-09-30",
+          "field": "net_profit",
+          "sourceId": "moutai2026q3",
+          "page": 9,
+          "filingValue": 66717143218.04,
+          "providerValue": 66717143218.04,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "20269M-parentProfit",
+          "label": "归母净利润",
+          "period": "2026-09-30",
+          "field": "parent_holder_net_profit",
+          "sourceId": "moutai2026q3",
+          "page": 9,
+          "filingValue": 64467425981.95,
+          "providerValue": 64467425981.95,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api/a-share/financials/cash-flow-statements?thscode=600519.SH&period=annual&limit=3",
+      "status": "ok",
+      "requestId": "45587d3928d447dab4839d99f23e9a2d",
+      "message": "真实 REST 查询已返回；仅比对所列字段",
+      "comparisons": [
+        {
+          "id": "2023-ocf",
+          "label": "经营活动现金流量净额",
+          "period": "2023-12-31",
+          "field": "act_cash_flow_net",
+          "sourceId": "moutai2025",
+          "page": 6,
+          "filingValue": 66593247721.09,
+          "providerValue": 66593247721.09,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2024-ocf",
+          "label": "经营活动现金流量净额",
+          "period": "2024-12-31",
+          "field": "act_cash_flow_net",
+          "sourceId": "moutai2025",
+          "page": 6,
+          "filingValue": 92463692168.43,
+          "providerValue": 92463692168.43,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "2025-ocf",
+          "label": "经营活动现金流量净额",
+          "period": "2025-12-31",
+          "field": "act_cash_flow_net",
+          "sourceId": "moutai2025",
+          "page": 6,
+          "filingValue": 61522204989.35,
+          "providerValue": 61522204989.35,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        }
+      ]
+    },
+    {
+      "endpoint": "/api/a-share/financials/cash-flow-statements?thscode=600519.SH&period=quarterly&limit=8",
+      "status": "ok",
+      "requestId": "6ea68759a086432fbaf7e0bc62bc0db0",
+      "message": "真实 REST 查询已返回；仅比对所列字段",
+      "comparisons": [
+        {
+          "id": "20259M-ocf",
+          "label": "经营活动现金流量净额",
+          "period": "2025-09-30",
+          "field": "act_cash_flow_net",
+          "sourceId": "moutai2026q3",
+          "page": 11,
+          "filingValue": 38196802155.27,
+          "providerValue": 38196802155.27,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        },
+        {
+          "id": "20269M-ocf",
+          "label": "经营活动现金流量净额",
+          "period": "2026-09-30",
+          "field": "act_cash_flow_net",
+          "sourceId": "moutai2026q3",
+          "page": 11,
+          "filingValue": 84058979832.29,
+          "providerValue": 84058979832.29,
+          "status": "match",
+          "reason": "同标的、同报告期、人民币元字段一致；不自动认定为单季流量"
+        }
+      ]
+    }
+  ],
+  "message": "23 项财务值与原始财报快照一致。结果仅覆盖所列字段，不代表全接口或实时行情已核验。"
+}

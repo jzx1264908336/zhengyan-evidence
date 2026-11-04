@@ -1,0 +1,706 @@
+{
+  "version": "filings-20261104-v1",
+  "asOf": "2026-11-04",
+  "company": {
+    "name": "贵州茅台",
+    "code": "600519.SH",
+    "industry": "白酒 · 非金融企业",
+    "description": "以茅台酒及系列酒为主营；合并报表包含财务公司，现金流需结合业务边界理解。"
+  },
+  "sources": [
+    {
+      "id": "moutai2024",
+      "title": "贵州茅台 2024 年年度报告",
+      "company": "贵州茅台",
+      "url": "https://static.cninfo.com.cn/finalpage/2025-04-03/1222993920.PDF",
+      "published": "2025-04-03",
+      "fetched": "2026-11-04",
+      "sha256": "5299f4940e2ce4e91084b73dc457d558b9d335fa76fbfee6227e4254eb7f4a30",
+      "pages": 143
+    },
+    {
+      "id": "moutai2025",
+      "title": "贵州茅台 2025 年年度报告",
+      "company": "贵州茅台",
+      "url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2026-04-17/600519_20260417_9QS4.pdf",
+      "published": "2026-04-17",
+      "fetched": "2026-11-04",
+      "sha256": "474905deeaf0f875fc0a1b097a626c0c7852c427faadc5d7fc7816cbf45ea288",
+      "pages": 143
+    },
+    {
+      "id": "moutai2026q3",
+      "title": "贵州茅台 2026 年第三季度报告",
+      "company": "贵州茅台",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-10-31/1225649896.PDF",
+      "published": "2026-10-31",
+      "fetched": "2026-11-04",
+      "sha256": "96ba51ebf414f841bce79b3ba019927df2f795142392e12e96a9d559e96ebb9b",
+      "pages": 12
+    },
+    {
+      "id": "luzhou2025",
+      "title": "泸州老窖 2025 年年度报告",
+      "company": "泸州老窖",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-29/1225240660.PDF",
+      "published": "2026-04-29",
+      "fetched": "2026-11-04",
+      "sha256": "7a2e321f049401fd34dfbf8c22964e804d16f077ece9382791cb2b2ce0c74676",
+      "pages": 183
+    },
+    {
+      "id": "wuliangye2025",
+      "title": "五粮液 2025 年年度报告摘要",
+      "company": "五粮液",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-30/1225273090.PDF",
+      "published": "2026-04-30",
+      "fetched": "2026-11-04",
+      "sha256": "02304ef2f0acb02219fc0854ec39c187055fcb65eda6a1ff1cc008d728fa54cb",
+      "pages": 4
+    },
+    {
+      "id": "fenjiu2025",
+      "title": "山西汾酒 2025 年年度报告",
+      "company": "山西汾酒",
+      "url": "https://pdf.dfcfw.com/pdf/H2_AN202604221821466497_1.pdf",
+      "published": "2026-04-23",
+      "fetched": "2026-11-04",
+      "sha256": "f824fbe77c0bf415d14b55fe951cc9fa27e326d700535d70e03a4ee009d47e6a",
+      "pages": 169
+    }
+  ],
+  "observations": [
+    {
+      "id": "2023-revenue",
+      "label": "营业收入",
+      "raw": "147,693,604,994.14",
+      "unit": "CNY",
+      "period": "2023 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "合并"
+    },
+    {
+      "id": "2023-parentProfit",
+      "label": "归母净利润",
+      "raw": "74,734,071,550.75",
+      "unit": "CNY",
+      "period": "2023 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "2023-ocf",
+      "label": "经营活动现金流量净额",
+      "raw": "66,593,247,721.09",
+      "unit": "CNY",
+      "period": "2023 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "合并"
+    },
+    {
+      "id": "2023-roe",
+      "label": "加权平均净资产收益率",
+      "raw": "34.19",
+      "unit": "percent",
+      "period": "2023 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "归母·加权平均"
+    },
+    {
+      "id": "2024-revenue",
+      "label": "营业收入",
+      "raw": "170,899,152,276.34",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "合并"
+    },
+    {
+      "id": "2024-parentProfit",
+      "label": "归母净利润",
+      "raw": "86,228,146,421.62",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "2024-ocf",
+      "label": "经营活动现金流量净额",
+      "raw": "92,463,692,168.43",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "合并"
+    },
+    {
+      "id": "2024-roe",
+      "label": "加权平均净资产收益率",
+      "raw": "36.02",
+      "unit": "percent",
+      "period": "2024 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "归母·加权平均"
+    },
+    {
+      "id": "2025-revenue",
+      "label": "营业收入",
+      "raw": "168,838,102,514.79",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "合并"
+    },
+    {
+      "id": "2025-parentProfit",
+      "label": "归母净利润",
+      "raw": "82,320,067,101.68",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "2025-ocf",
+      "label": "经营活动现金流量净额",
+      "raw": "61,522,204,989.35",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "合并"
+    },
+    {
+      "id": "2025-roe",
+      "label": "加权平均净资产收益率",
+      "raw": "32.53",
+      "unit": "percent",
+      "period": "2025 FY",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "scope": "归母·加权平均"
+    },
+    {
+      "id": "2025-cost",
+      "label": "营业成本",
+      "raw": "14,892,277,570.91",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "moutai2025",
+      "page": 61,
+      "scope": "合并"
+    },
+    {
+      "id": "2025-totalProfit",
+      "label": "合并净利润",
+      "raw": "85,310,324,833.67",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "moutai2025",
+      "page": 62,
+      "scope": "合并"
+    },
+    {
+      "id": "2024-cost",
+      "label": "营业成本",
+      "raw": "13,789,482,367.98",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "moutai2025",
+      "page": 61,
+      "scope": "合并"
+    },
+    {
+      "id": "2024-totalProfit",
+      "label": "合并净利润",
+      "raw": "89,334,728,025.90",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "moutai2025",
+      "page": 62,
+      "scope": "合并"
+    },
+    {
+      "id": "20269M-revenue",
+      "label": "营业收入",
+      "raw": "130,970,743,649.04",
+      "unit": "CNY",
+      "period": "2026 9M",
+      "sourceId": "moutai2026q3",
+      "page": 8,
+      "scope": "合并"
+    },
+    {
+      "id": "20269M-parentProfit",
+      "label": "归母净利润",
+      "raw": "64,467,425,981.95",
+      "unit": "CNY",
+      "period": "2026 9M",
+      "sourceId": "moutai2026q3",
+      "page": 9,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "20269M-ocf",
+      "label": "经营活动现金流量净额",
+      "raw": "84,058,979,832.29",
+      "unit": "CNY",
+      "period": "2026 9M",
+      "sourceId": "moutai2026q3",
+      "page": 11,
+      "scope": "合并"
+    },
+    {
+      "id": "20269M-cost",
+      "label": "营业成本",
+      "raw": "13,645,718,932.90",
+      "unit": "CNY",
+      "period": "2026 9M",
+      "sourceId": "moutai2026q3",
+      "page": 8,
+      "scope": "合并"
+    },
+    {
+      "id": "20269M-totalProfit",
+      "label": "合并净利润",
+      "raw": "66,717,143,218.04",
+      "unit": "CNY",
+      "period": "2026 9M",
+      "sourceId": "moutai2026q3",
+      "page": 9,
+      "scope": "合并"
+    },
+    {
+      "id": "20269M-salesCash",
+      "label": "销售商品、提供劳务收到的现金",
+      "raw": "143,522,752,519.23",
+      "unit": "CNY",
+      "period": "2026 9M",
+      "sourceId": "moutai2026q3",
+      "page": 10,
+      "scope": "合并"
+    },
+    {
+      "id": "20259M-revenue",
+      "label": "营业收入",
+      "raw": "128,453,707,655.86",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "moutai2026q3",
+      "page": 8,
+      "scope": "合并"
+    },
+    {
+      "id": "20259M-parentProfit",
+      "label": "归母净利润",
+      "raw": "64,626,746,712.18",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "moutai2026q3",
+      "page": 9,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "20259M-ocf",
+      "label": "经营活动现金流量净额",
+      "raw": "38,196,802,155.27",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "moutai2026q3",
+      "page": 11,
+      "scope": "合并"
+    },
+    {
+      "id": "20259M-cost",
+      "label": "营业成本",
+      "raw": "11,183,972,073.77",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "moutai2026q3",
+      "page": 8,
+      "scope": "合并"
+    },
+    {
+      "id": "20259M-totalProfit",
+      "label": "合并净利润",
+      "raw": "66,898,804,746.17",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "moutai2026q3",
+      "page": 9,
+      "scope": "合并"
+    },
+    {
+      "id": "20259M-salesCash",
+      "label": "销售商品、提供劳务收到的现金",
+      "raw": "138,791,719,991.59",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "moutai2026q3",
+      "page": 10,
+      "scope": "合并"
+    },
+    {
+      "id": "20269M-deposit",
+      "label": "客户存款和同业存放款项净增加额",
+      "raw": "-774,901,684.37",
+      "unit": "CNY",
+      "period": "2026 9M",
+      "sourceId": "moutai2026q3",
+      "page": 10,
+      "scope": "合并"
+    },
+    {
+      "id": "20269M-bank",
+      "label": "存放中央银行和同业款项净增加额",
+      "raw": "-22,715,439,598.84",
+      "unit": "CNY",
+      "period": "2026 9M",
+      "sourceId": "moutai2026q3",
+      "page": 11,
+      "scope": "合并"
+    },
+    {
+      "id": "20259M-deposit",
+      "label": "客户存款和同业存放款项净增加额",
+      "raw": "-8,659,745,768.25",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "moutai2026q3",
+      "page": 10,
+      "scope": "合并"
+    },
+    {
+      "id": "20259M-bank",
+      "label": "存放中央银行和同业款项净增加额",
+      "raw": "12,507,272,127.36",
+      "unit": "CNY",
+      "period": "2025 9M",
+      "sourceId": "moutai2026q3",
+      "page": 11,
+      "scope": "合并"
+    },
+    {
+      "id": "2025Q1-revenue",
+      "label": "营业收入",
+      "raw": "50,600,957,885.78",
+      "unit": "CNY",
+      "period": "2025 Q1",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "2025Q1-parentProfit",
+      "label": "归母净利润",
+      "raw": "26,847,474,238.76",
+      "unit": "CNY",
+      "period": "2025 Q1",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "2025Q1-ocf",
+      "label": "经营活动现金流量净额",
+      "raw": "8,809,195,646.38",
+      "unit": "CNY",
+      "period": "2025 Q1",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "2025Q2-revenue",
+      "label": "营业收入",
+      "raw": "38,788,396,531.06",
+      "unit": "CNY",
+      "period": "2025 Q2",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "2025Q2-parentProfit",
+      "label": "归母净利润",
+      "raw": "18,555,488,059.34",
+      "unit": "CNY",
+      "period": "2025 Q2",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "2025Q2-ocf",
+      "label": "经营活动现金流量净额",
+      "raw": "4,309,865,384.95",
+      "unit": "CNY",
+      "period": "2025 Q2",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "2025Q3-revenue",
+      "label": "营业收入",
+      "raw": "39,064,353,239.02",
+      "unit": "CNY",
+      "period": "2025 Q3",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "2025Q3-parentProfit",
+      "label": "归母净利润",
+      "raw": "19,223,784,414.08",
+      "unit": "CNY",
+      "period": "2025 Q3",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "2025Q3-ocf",
+      "label": "经营活动现金流量净额",
+      "raw": "25,077,741,123.94",
+      "unit": "CNY",
+      "period": "2025 Q3",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "2025Q4-revenue",
+      "label": "营业收入",
+      "raw": "40,384,394,858.93",
+      "unit": "CNY",
+      "period": "2025 Q4",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "2025Q4-parentProfit",
+      "label": "归母净利润",
+      "raw": "17,693,320,389.50",
+      "unit": "CNY",
+      "period": "2025 Q4",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "2025Q4-ocf",
+      "label": "经营活动现金流量净额",
+      "raw": "23,325,402,834.08",
+      "unit": "CNY",
+      "period": "2025 Q4",
+      "sourceId": "moutai2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "000568.SZ-2025-revenue",
+      "label": "营业收入",
+      "raw": "25,731,010,647.32",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "luzhou2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "000568.SZ-2025-parentProfit",
+      "label": "归母净利润",
+      "raw": "10,830,713,936.14",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "luzhou2025",
+      "page": 7,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "000568.SZ-2024-revenue",
+      "label": "营业收入",
+      "raw": "31,196,248,208.33",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "luzhou2025",
+      "page": 7,
+      "scope": "合并"
+    },
+    {
+      "id": "000568.SZ-2024-parentProfit",
+      "label": "归母净利润",
+      "raw": "13,472,986,476.01",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "luzhou2025",
+      "page": 7,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "000568.SZ-2025-roe",
+      "label": "加权平均净资产收益率",
+      "raw": "22.66",
+      "unit": "percent",
+      "period": "2025 FY",
+      "sourceId": "luzhou2025",
+      "page": 7,
+      "scope": "归母·加权平均"
+    },
+    {
+      "id": "600809.SH-2025-revenue",
+      "label": "营业收入",
+      "raw": "38,718,257,657.74",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "fenjiu2025",
+      "page": 5,
+      "scope": "合并"
+    },
+    {
+      "id": "600809.SH-2025-parentProfit",
+      "label": "归母净利润",
+      "raw": "12,246,329,337.25",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "fenjiu2025",
+      "page": 5,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "600809.SH-2024-revenue",
+      "label": "营业收入",
+      "raw": "36,010,992,321.46",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "fenjiu2025",
+      "page": 5,
+      "scope": "合并"
+    },
+    {
+      "id": "600809.SH-2024-parentProfit",
+      "label": "归母净利润",
+      "raw": "12,242,884,323.77",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "fenjiu2025",
+      "page": 5,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "600809.SH-2025-roe",
+      "label": "加权平均净资产收益率",
+      "raw": "33.48",
+      "unit": "percent",
+      "period": "2025 FY",
+      "sourceId": "fenjiu2025",
+      "page": 5,
+      "scope": "归母·加权平均"
+    },
+    {
+      "id": "000858.SZ-2025-revenue",
+      "label": "营业收入",
+      "raw": "40,528,509,770.23",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "wuliangye2025",
+      "page": 2,
+      "scope": "合并"
+    },
+    {
+      "id": "000858.SZ-2025-parentProfit",
+      "label": "归母净利润",
+      "raw": "8,954,257,202.51",
+      "unit": "CNY",
+      "period": "2025 FY",
+      "sourceId": "wuliangye2025",
+      "page": 3,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "000858.SZ-2024-revenue",
+      "label": "营业收入",
+      "raw": "89,175,178,322.70",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "wuliangye2025",
+      "page": 2,
+      "scope": "合并"
+    },
+    {
+      "id": "000858.SZ-2024-parentProfit",
+      "label": "归母净利润",
+      "raw": "31,853,172,533.98",
+      "unit": "CNY",
+      "period": "2024 FY",
+      "sourceId": "wuliangye2025",
+      "page": 3,
+      "scope": "合并·归属于母公司股东"
+    },
+    {
+      "id": "000858.SZ-2025-roe",
+      "label": "加权平均净资产收益率",
+      "raw": "6.89",
+      "unit": "percent",
+      "period": "2025 FY",
+      "sourceId": "wuliangye2025",
+      "page": 3,
+      "scope": "归母·加权平均"
+    }
+  ],
+  "notes": [
+    {
+      "id": "N-cash",
+      "title": "公司披露：现金流变动涉及财务公司",
+      "text": "公司将前三季度经营现金流变动主要归因于财务公司同业存款到期收回，以及吸收集团成员单位存款净增加额变动。该解释来自公司披露，尚未单独审计验证。",
+      "sourceId": "moutai2026q3",
+      "page": 3,
+      "kind": "disclosure"
+    },
+    {
+      "id": "N-annual",
+      "title": "2025 年现金流的比较背景",
+      "text": "年报说明经营现金流减少主要涉及财务公司吸收成员单位存款减少，以及不可随时支取的同业存款增加。",
+      "sourceId": "moutai2025",
+      "page": 6,
+      "kind": "disclosure"
+    },
+    {
+      "id": "N-audit",
+      "title": "2026 年三季报未经审计",
+      "text": "2026 年第三季度报告明确标注财务报表未经审计。季度报告与经审计年度报告的保证程度不同。",
+      "sourceId": "moutai2026q3",
+      "page": 1,
+      "kind": "limitation"
+    },
+    {
+      "id": "N-wly",
+      "title": "五粮液：收入确认调整影响可比性",
+      "text": "五粮液年报摘要说明，2025 年部分业务收入确认核算调整，季度数据与此前披露存在重大差异。因此保留展示，但默认从同比中位数中排除。",
+      "sourceId": "wuliangye2025",
+      "page": 3,
+      "kind": "limitation"
+    },
+    {
+      "id": "N-channel",
+      "title": "渠道结构是下一步核验方向",
+      "text": "三季报按直销、批发代理披露收入，并列示 i 茅台不含税收入；这些是收入结构信息，不能替代终端库存与消费者实际动销数据。",
+      "sourceId": "moutai2026q3",
+      "page": 3,
+      "kind": "limitation"
+    }
+  ]
+}

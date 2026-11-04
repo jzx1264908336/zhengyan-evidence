@@ -1,0 +1,18 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {POST} from '../app/api/diagnose/route.ts';
+import {GET} from '../app/api/status/route.ts';
+import {snapshot} from '../lib/research/engine.ts';
+import {allowRequest} from '../lib/research/guard.ts';
+const req=(body:unknown,extra:Record<string,string>={})=>new Request('https://example.test/api/diagnose',{method:'POST',headers:{'Content-Type':'application/json','cf-connecting-ip':crypto.randomUUID(),...extra},body:JSON.stringify(body)});
+test('API main path returns traceable deterministic results without credentials',async()=>{const r=await POST(req({question:'现金流增长是否说明盈利质量改善',snapshot:snapshot.version}));assert.equal(r.status,200);const d=await r.json() as any;assert.equal(d.snapshot,snapshot.version);assert.ok(d.claims.length>0);assert.equal(d.ai.status,'unconfigured');assert.ok(d.claims.some((c:any)=>c.stance==='conflict'))});
+test('API scope boundary',async()=>{const r=await POST(req({question:'分析银行经营质量'}));const d=await r.json() as any;assert.equal(d.task.restricted,true);assert.deepEqual(d.claims,[])});
+test('API buy/sell boundary',async()=>{const r=await POST(req({question:'明天是否满仓买入'}));const d=await r.json() as any;assert.equal(d.task.restricted,true);assert.deepEqual(d.claims,[])});
+test('API stale snapshot is rejected',async()=>assert.equal((await POST(req({question:'分析现金流',snapshot:'old'}))).status,409));
+test('API short, missing, non-string and long questions are rejected',async()=>{for(const question of ['a',undefined,17,'x'.repeat(401)])assert.equal((await POST(req({question}))).status,400)});
+test('API invalid JSON is rejected',async()=>assert.equal((await POST(new Request('https://example.test/api/diagnose',{method:'POST',body:'{bad'}))).status,400));
+test('API cross origin is rejected',async()=>assert.equal((await POST(req({question:'现金流'},{origin:'https://other.test'}))).status,403));
+test('API oversized header is rejected',async()=>assert.equal((await POST(req({question:'现金流'},{'content-length':'9999'}))).status,413));
+test('API status contains no credentials',()=>{const r=GET();assert.equal(r.status,200);assert.equal(r.headers.get('Cache-Control'),'no-store')});
+test('API challenge preserves counterevidence',async()=>{const r=await POST(req({question:'现金流',challenge:true}));const d=await r.json() as any;assert.ok(d.claims.every((c:any)=>c.stance!=='positive'));assert.ok(d.claims.length>0)});
+test('request budget expires after window',()=>{const id=crypto.randomUUID();for(let i=0;i<12;i++)assert.equal(allowRequest(id,1000),true);assert.equal(allowRequest(id,1000),false);assert.equal(allowRequest(id,62000),true)});

@@ -1,0 +1,6 @@
+'use client';
+import {value,format,obs} from '../lib/research/engine';
+export default function TrendChart({mode,onOpen}:{mode:'annual'|'quarter';onOpen:(id:string)=>void}){
+ const periods=mode==='annual'?['2023','2024','2025']:['2025Q1','2025Q2','2025Q3','2025Q4'];const max=mode==='annual'?1800:600;
+ return <div className="trend"><div className="chart-legend"><span><i/>营业收入</span><span><i/>归母净利润</span><span><i/>经营现金流</span><small>亿元 · {mode==='annual'?'完整年度':'单季流量'}</small></div><div className="plot"><div className="y-axis">{[max,max*2/3,max/3,0].map((n,i)=><span key={i}>{Math.round(n)}</span>)}</div><div className="bar-chart">{[0,1,2,3].map(i=><div className="gridline" key={i} style={{top:i/3*100+'%'}}/>)}{periods.map(p=><div className="bar-group" key={p}><div className="bars">{['revenue','parentProfit','ocf'].map((field,i)=>{const v=value(p+'-'+field);return <button key={field} title={`${p} ${obs(p+'-'+field)?.label}：${format(v,'CNY')} 亿元；点击核验`} aria-label={`${p} ${obs(p+'-'+field)?.label} ${format(v,'CNY')}亿元，查看证据`} style={{height:(v??0)/1e8/max*100+'%',background:['#187f73','#b8cdc5','#d3b678'][i]}} onClick={()=>onOpen(p+'-'+field)}/>})}</div><span>{mode==='quarter'?p.replace('2025',''):p}</span></div>)}</div></div><p className="fine">年度与单季分别比较。合并经营现金流包含财务公司；柱形高度不代表主业盈利质量。</p></div>
+}
